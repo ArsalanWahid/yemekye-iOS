@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		932E432C88C253168DB7C118 /* Pods_yemekye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34C77475C04E36A313A85BE /* Pods_yemekye.framework */; };
+		D7109E851FD5C3150019E779 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7109E841FD5C3150019E779 /* SettingViewController.swift */; };
+		D72439411FD6A52600BB5A40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72439401FD6A52600BB5A40 /* User.swift */; };
+		D72439431FD6A53200BB5A40 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72439421FD6A53200BB5A40 /* Resturant.swift */; };
+		D72439451FD6A55000BB5A40 /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72439441FD6A55000BB5A40 /* MealItem.swift */; };
+		D72439471FD6A70D00BB5A40 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72439461FD6A70D00BB5A40 /* Menu.swift */; };
+		D724394D1FD6AAC500BB5A40 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724394C1FD6AAC500BB5A40 /* Country.swift */; };
+		D724394F1FD6AB0900BB5A40 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724394E1FD6AB0900BB5A40 /* Cities.swift */; };
+		D726AD601F9CC6FB00C37CFA /* ResturantCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AD5E1F9CC6FB00C37CFA /* ResturantCell1.swift */; };
+		D726AD611F9CC6FB00C37CFA /* ResturantCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D726AD5F1F9CC6FB00C37CFA /* ResturantCell1.xib */; };
+		D726AD691F9CCBFE00C37CFA /* ResturantDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */; };
+		D762275D1FA8C10B007B82E7 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */; };
+		D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */; };
+		D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */; };
+		D793A6701FB360C300D9BF32 /* promotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793A66F1FB360C300D9BF32 /* promotions.swift */; };
+		D7B78C881FD57A9300A9CEC8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */; };
+		D7C9CA981FAC90A5006A2026 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9CA971FAC90A5006A2026 /* LoginManager.swift */; };
+		D7F124A41F9C8F50000491D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F124A31F9C8F50000491D4 /* AppDelegate.swift */; };
+		D7F124A61F9C8F50000491D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F124A51F9C8F50000491D4 /* LoginViewController.swift */; };
+		D7F124A91F9C8F50000491D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F124A71F9C8F50000491D4 /* Main.storyboard */; };
+		D7F124AB1F9C8F50000491D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F124AA1F9C8F50000491D4 /* Assets.xcassets */; };
+		D7F124AE1F9C8F50000491D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F124AC1F9C8F50000491D4 /* LaunchScreen.storyboard */; };
+		D7F124B61F9C9796000491D4 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F124B51F9C9796000491D4 /* mainViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9726A432DB4CEB0F7CF07CBE /* Pods-yemekye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yemekye.release.xcconfig"; path = "Pods/Target Support Files/Pods-yemekye/Pods-yemekye.release.xcconfig"; sourceTree = "<group>"; };
+		AA6A6716F4F53871CB2B4276 /* Pods-yemekye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yemekye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yemekye/Pods-yemekye.debug.xcconfig"; sourceTree = "<group>"; };
+		C34C77475C04E36A313A85BE /* Pods_yemekye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yemekye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7109E841FD5C3150019E779 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D72439401FD6A52600BB5A40 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D72439421FD6A53200BB5A40 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
+		D72439441FD6A55000BB5A40 /* MealItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItem.swift; sourceTree = "<group>"; };
+		D72439461FD6A70D00BB5A40 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		D724394C1FD6AAC500BB5A40 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		D724394E1FD6AB0900BB5A40 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		D726AD5E1F9CC6FB00C37CFA /* ResturantCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCell1.swift; sourceTree = "<group>"; };
+		D726AD5F1F9CC6FB00C37CFA /* ResturantCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResturantCell1.xib; sourceTree = "<group>"; };
+		D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetialViewController.swift; sourceTree = "<group>"; };
+		D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D793A66F1FB360C300D9BF32 /* promotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promotions.swift; sourceTree = "<group>"; };
+		D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		D7C9CA971FAC90A5006A2026 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		D7F124A01F9C8F50000491D4 /* yemekye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yemekye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F124A31F9C8F50000491D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7F124A51F9C8F50000491D4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D7F124A81F9C8F50000491D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7F124AA1F9C8F50000491D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7F124AD1F9C8F50000491D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7F124AF1F9C8F50000491D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7F124B51F9C9796000491D4 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7F1249D1F9C8F50000491D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932E432C88C253168DB7C118 /* Pods_yemekye.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71C4148A34EFEA1138201C1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C34C77475C04E36A313A85BE /* Pods_yemekye.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D7AF68339A55B1D2D46FAB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA6A6716F4F53871CB2B4276 /* Pods-yemekye.debug.xcconfig */,
+				9726A432DB4CEB0F7CF07CBE /* Pods-yemekye.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D726AD631F9CC71600C37CFA /* Resturant Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D72439461FD6A70D00BB5A40 /* Menu.swift */,
+				D724394E1FD6AB0900BB5A40 /* Cities.swift */,
+				D724394C1FD6AAC500BB5A40 /* Country.swift */,
+				D726AD5E1F9CC6FB00C37CFA /* ResturantCell1.swift */,
+				D726AD5F1F9CC6FB00C37CFA /* ResturantCell1.xib */,
+			);
+			path = "Resturant Cells";
+			sourceTree = "<group>";
+		};
+		D74FE3D91FA33F8200B533AB /* Login Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D7F124A51F9C8F50000491D4 /* LoginViewController.swift */,
+				D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */,
+				D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */,
+				D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */,
+			);
+			path = "Login Controllers";
+			sourceTree = "<group>";
+		};
+		D74FE3DA1FA33FA500B533AB /* App Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D7F124B51F9C9796000491D4 /* mainViewController.swift */,
+				D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */,
+				D793A66F1FB360C300D9BF32 /* promotions.swift */,
+				D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */,
+				D7109E841FD5C3150019E779 /* SettingViewController.swift */,
+			);
+			path = "App Controllers";
+			sourceTree = "<group>";
+		};
+		D74FE3DB1FA33FB400B533AB /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				D7F124A71F9C8F50000491D4 /* Main.storyboard */,
+				D7F124AC1F9C8F50000491D4 /* LaunchScreen.storyboard */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		D74FE3DC1FA33FCD00B533AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7F124A31F9C8F50000491D4 /* AppDelegate.swift */,
+				D7F124AA1F9C8F50000491D4 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7F124971F9C8F50000491D4 = {
+			isa = PBXGroup;
+			children = (
+				D7F124A21F9C8F50000491D4 /* yemekye */,
+				D7F124A11F9C8F50000491D4 /* Products */,
+				71C4148A34EFEA1138201C1E /* Frameworks */,
+				7D7AF68339A55B1D2D46FAB9 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		D7F124A11F9C8F50000491D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7F124A01F9C8F50000491D4 /* yemekye.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7F124A21F9C8F50000491D4 /* yemekye */ = {
+			isa = PBXGroup;
+			children = (
+				D7F124AF1F9C8F50000491D4 /* Info.plist */,
+				D7C9CA971FAC90A5006A2026 /* LoginManager.swift */,
+				D74FE3DB1FA33FB400B533AB /* Interfaces */,
+				D74FE3DC1FA33FCD00B533AB /* Supporting Files */,
+				D74FE3D91FA33F8200B533AB /* Login Controllers */,
+				D74FE3DA1FA33FA500B533AB /* App Controllers */,
+				D726AD631F9CC71600C37CFA /* Resturant Cells */,
+				D72439401FD6A52600BB5A40 /* User.swift */,
+				D72439421FD6A53200BB5A40 /* Resturant.swift */,
+				D72439441FD6A55000BB5A40 /* MealItem.swift */,
+			);
+			path = yemekye;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7F1249F1F9C8F50000491D4 /* yemekye */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7F124B21F9C8F50000491D4 /* Build configuration list for PBXNativeTarget "yemekye" */;
+			buildPhases = (
+				8E18CEDB9304CC731EFE6B1C /* [CP] Check Pods Manifest.lock */,
+				D7F1249C1F9C8F50000491D4 /* Sources */,
+				D7F1249D1F9C8F50000491D4 /* Frameworks */,
+				D7F1249E1F9C8F50000491D4 /* Resources */,
+				9A067B696A5D4BB756441D6F /* [CP] Embed Pods Frameworks */,
+				24245A1C6564104F0A69CFE2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yemekye;
+			productName = yemekye;
+			productReference = D7F124A01F9C8F50000491D4 /* yemekye.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7F124981F9C8F50000491D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Arsalan Wahid Asghar";
+				TargetAttributes = {
+					D7F1249F1F9C8F50000491D4 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D7F1249B1F9C8F50000491D4 /* Build configuration list for PBXProject "yemekye" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7F124971F9C8F50000491D4;
+			productRefGroup = D7F124A11F9C8F50000491D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7F1249F1F9C8F50000491D4 /* yemekye */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7F1249E1F9C8F50000491D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D726AD611F9CC6FB00C37CFA /* ResturantCell1.xib in Resources */,
+				D7F124AE1F9C8F50000491D4 /* LaunchScreen.storyboard in Resources */,
+				D7F124AB1F9C8F50000491D4 /* Assets.xcassets in Resources */,
+				D7F124A91F9C8F50000491D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24245A1C6564104F0A69CFE2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yemekye/Pods-yemekye-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E18CEDB9304CC731EFE6B1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yemekye-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A067B696A5D4BB756441D6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-yemekye/Pods-yemekye-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yemekye/Pods-yemekye-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7F1249C1F9C8F50000491D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F124A61F9C8F50000491D4 /* LoginViewController.swift in Sources */,
+				D726AD601F9CC6FB00C37CFA /* ResturantCell1.swift in Sources */,
+				D72439431FD6A53200BB5A40 /* Resturant.swift in Sources */,
+				D726AD691F9CCBFE00C37CFA /* ResturantDetialViewController.swift in Sources */,
+				D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */,
+				D7F124A41F9C8F50000491D4 /* AppDelegate.swift in Sources */,
+				D724394F1FD6AB0900BB5A40 /* Cities.swift in Sources */,
+				D7109E851FD5C3150019E779 /* SettingViewController.swift in Sources */,
+				D72439451FD6A55000BB5A40 /* MealItem.swift in Sources */,
+				D72439411FD6A52600BB5A40 /* User.swift in Sources */,
+				D724394D1FD6AAC500BB5A40 /* Country.swift in Sources */,
+				D7B78C881FD57A9300A9CEC8 /* MoreViewController.swift in Sources */,
+				D72439471FD6A70D00BB5A40 /* Menu.swift in Sources */,
+				D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */,
+				D7C9CA981FAC90A5006A2026 /* LoginManager.swift in Sources */,
+				D762275D1FA8C10B007B82E7 /* ResetPasswordViewController.swift in Sources */,
+				D793A6701FB360C300D9BF32 /* promotions.swift in Sources */,
+				D7F124B61F9C9796000491D4 /* mainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D7F124A71F9C8F50000491D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7F124A81F9C8F50000491D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7F124AC1F9C8F50000491D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7F124AD1F9C8F50000491D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7F124B01F9C8F50000491D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7F124B11F9C8F50000491D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7F124B31F9C8F50000491D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA6A6716F4F53871CB2B4276 /* Pods-yemekye.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44R9FC56QP;
+				INFOPLIST_FILE = yemekye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asghars.yemekye.yemekye;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7F124B41F9C8F50000491D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9726A432DB4CEB0F7CF07CBE /* Pods-yemekye.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44R9FC56QP;
+				INFOPLIST_FILE = yemekye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asghars.yemekye.yemekye;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7F1249B1F9C8F50000491D4 /* Build configuration list for PBXProject "yemekye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7F124B01F9C8F50000491D4 /* Debug */,
+				D7F124B11F9C8F50000491D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7F124B21F9C8F50000491D4 /* Build configuration list for PBXNativeTarget "yemekye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7F124B31F9C8F50000491D4 /* Debug */,
+				D7F124B41F9C8F50000491D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7F124981F9C8F50000491D4 /* Project object */;
+}
