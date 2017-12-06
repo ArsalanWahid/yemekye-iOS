@@ -12,9 +12,9 @@ import UIKit
 class Resturant{
     
     var name :String
-    var locationsOpen: [Country]
-    var menu : [Menu]
-    var timings : [String]
+    unowned let city: City
+    var menu : Menu
+    var timing : [String]
     var resturantImage: UIImage?
     var status: String
     var address: String
@@ -23,7 +23,7 @@ class Resturant{
     
     //The mighty Restuart Object
     //Failable as some parameteres cannot be nil
-    init?(name: String, locationOpen: [Country],menu: [Menu],timings:[String],resturantImage:UIImage?, status:String, address:String, phonenumber:String) {
+    init?(name: String, city: City,menu: Menu,timings:[String],resturantImage:UIImage?, status:String, address:String, phonenumber:String) {
         
         
         //Resturant name cannot be nil
@@ -36,11 +36,11 @@ class Resturant{
             return nil
         }
         
-        
+        //Set the Object Properties
         self.name = name
-        self.locationsOpen = locationOpen
+        self.city = city
         self.menu = menu
-        self.timings = timings
+        self.timing = timings
         self.resturantImage = resturantImage
         self.status = status
         self.address = address

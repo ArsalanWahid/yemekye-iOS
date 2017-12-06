@@ -18,6 +18,9 @@
 		D726AD601F9CC6FB00C37CFA /* ResturantCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AD5E1F9CC6FB00C37CFA /* ResturantCell1.swift */; };
 		D726AD611F9CC6FB00C37CFA /* ResturantCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D726AD5F1F9CC6FB00C37CFA /* ResturantCell1.xib */; };
 		D726AD691F9CCBFE00C37CFA /* ResturantDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */; };
+		D75F12DC1FD7E30700AE58CC /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75F12DB1FD7E30700AE58CC /* data.plist */; };
+		D75F12DE1FD7E84E00AE58CC /* DisplayPlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75F12DD1FD7E84E00AE58CC /* DisplayPlistViewController.swift */; };
+		D75F12E01FD801CA00AE58CC /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75F12DF1FD801CA00AE58CC /* data.swift */; };
 		D762275D1FA8C10B007B82E7 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */; };
 		D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */; };
 		D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */; };
@@ -46,6 +49,9 @@
 		D726AD5E1F9CC6FB00C37CFA /* ResturantCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCell1.swift; sourceTree = "<group>"; };
 		D726AD5F1F9CC6FB00C37CFA /* ResturantCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResturantCell1.xib; sourceTree = "<group>"; };
 		D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetialViewController.swift; sourceTree = "<group>"; };
+		D75F12DB1FD7E30700AE58CC /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		D75F12DD1FD7E84E00AE58CC /* DisplayPlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPlistViewController.swift; sourceTree = "<group>"; };
+		D75F12DF1FD801CA00AE58CC /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -94,9 +100,6 @@
 		D726AD631F9CC71600C37CFA /* Resturant Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D72439461FD6A70D00BB5A40 /* Menu.swift */,
-				D724394E1FD6AB0900BB5A40 /* Cities.swift */,
-				D724394C1FD6AAC500BB5A40 /* Country.swift */,
 				D726AD5E1F9CC6FB00C37CFA /* ResturantCell1.swift */,
 				D726AD5F1F9CC6FB00C37CFA /* ResturantCell1.xib */,
 			);
@@ -144,6 +147,19 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D7A7B77B1FD71F5E00F31155 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D72439401FD6A52600BB5A40 /* User.swift */,
+				D72439421FD6A53200BB5A40 /* Resturant.swift */,
+				D72439441FD6A55000BB5A40 /* MealItem.swift */,
+				D72439461FD6A70D00BB5A40 /* Menu.swift */,
+				D724394C1FD6AAC500BB5A40 /* Country.swift */,
+				D724394E1FD6AB0900BB5A40 /* Cities.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D7F124971F9C8F50000491D4 = {
 			isa = PBXGroup;
 			children = (
@@ -166,15 +182,16 @@
 			isa = PBXGroup;
 			children = (
 				D7F124AF1F9C8F50000491D4 /* Info.plist */,
+				D7A7B77B1FD71F5E00F31155 /* Models */,
 				D7C9CA971FAC90A5006A2026 /* LoginManager.swift */,
 				D74FE3DB1FA33FB400B533AB /* Interfaces */,
 				D74FE3DC1FA33FCD00B533AB /* Supporting Files */,
 				D74FE3D91FA33F8200B533AB /* Login Controllers */,
 				D74FE3DA1FA33FA500B533AB /* App Controllers */,
 				D726AD631F9CC71600C37CFA /* Resturant Cells */,
-				D72439401FD6A52600BB5A40 /* User.swift */,
-				D72439421FD6A53200BB5A40 /* Resturant.swift */,
-				D72439441FD6A55000BB5A40 /* MealItem.swift */,
+				D75F12DB1FD7E30700AE58CC /* data.plist */,
+				D75F12DD1FD7E84E00AE58CC /* DisplayPlistViewController.swift */,
+				D75F12DF1FD801CA00AE58CC /* data.swift */,
 			);
 			path = yemekye;
 			sourceTree = "<group>";
@@ -245,6 +262,7 @@
 				D726AD611F9CC6FB00C37CFA /* ResturantCell1.xib in Resources */,
 				D7F124AE1F9C8F50000491D4 /* LaunchScreen.storyboard in Resources */,
 				D7F124AB1F9C8F50000491D4 /* Assets.xcassets in Resources */,
+				D75F12DC1FD7E30700AE58CC /* data.plist in Resources */,
 				D7F124A91F9C8F50000491D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +338,8 @@
 			files = (
 				D7F124A61F9C8F50000491D4 /* LoginViewController.swift in Sources */,
 				D726AD601F9CC6FB00C37CFA /* ResturantCell1.swift in Sources */,
+				D75F12DE1FD7E84E00AE58CC /* DisplayPlistViewController.swift in Sources */,
+				D75F12E01FD801CA00AE58CC /* data.swift in Sources */,
 				D72439431FD6A53200BB5A40 /* Resturant.swift in Sources */,
 				D726AD691F9CCBFE00C37CFA /* ResturantDetialViewController.swift in Sources */,
 				D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */,

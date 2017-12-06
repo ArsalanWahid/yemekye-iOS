@@ -20,11 +20,10 @@ import UIKit
 
 
 //Need to fix this and add to someplace from FoodTracker App
-var resturants = [Resturant(image: #imageLiteral(resourceName: "macdonals"), name: "Dominos", status: "Open", address: "Madison Ave", phoneNumber: "+11689785"),
-                  Resturant(image: #imageLiteral(resourceName: "dominas"), name: "Dominos", status: "Open", address: "Madison Ave", phoneNumber: "+1123426"),
-                  Resturant(image: #imageLiteral(resourceName: "burgerKing"), name: "Burger King", status: "Open", address: "karachi", phoneNumber: "+1144432235"),
-                  Resturant(name: "KFC", locationOpen: Country.existingCountries, menu: <#T##[Menu]#>, timings: <#T##[String]#>, resturantImage: <#T##UIImage?#>, status: <#T##String#>, address: <#T##String#>, phonenumber: <#T##String#>)
-]
+
+
+var user :User? = User(name: "arsalan", email: "arsalanwahid1993@gmail.com", password: "1234", role: .customer)
+
 
 var cellIndex = 0
 
@@ -32,14 +31,13 @@ var cellIndex = 0
 
 
 //VIEW CONTROLLER CODE STARTS HERE
-class mainViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class mainViewController: UIViewController {
     
     //MARK:- Properties
     
     var _menuOpen = false
     
     //MARK:- OUTLETS
-    @IBOutlet weak var open: UIBarButtonItem!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
     
@@ -82,28 +80,28 @@ class mainViewController: UIViewController,UITableViewDelegate, UITableViewDataS
 
     //MARK:- Table DataSources
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resturants.count
-
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = Bundle.main.loadNibNamed("ResturantCell1", owner: self, options: nil)?.first as! ResturantCell1
-        cell.ResturantImage.image = resturants[indexPath.row].resturantImage
-        cell.ResturantName.text = resturants[indexPath.row].name
-       return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        cellIndex = indexPath.row
-        print("The index path at MainviewContriller is \(indexPath.row)")
-        performSegue(withIdentifier: "resturantDetial", sender: self)
-    }
-   
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return resturants.count
+//
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell  = Bundle.main.loadNibNamed("ResturantCell1", owner: self, options: nil)?.first as! ResturantCell1
+//        cell.ResturantImage.image = resturants[indexPath.row].resturantImage
+//        cell.ResturantName.text = resturants[indexPath.row].name
+//       return cell
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 150
+//    }
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        cellIndex = indexPath.row
+//        print("The index path at MainviewContriller is \(indexPath.row)")
+//        performSegue(withIdentifier: "resturantDetial", sender: self)
+//    }
+//
     //MARK:- Actions
     
     @IBAction func openMenu(_ sender: UIBarButtonItem){

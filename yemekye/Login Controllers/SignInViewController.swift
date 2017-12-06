@@ -13,6 +13,9 @@ import UIKit
 class SignInViewController: UIViewController ,UITextFieldDelegate{
 
     
+    //MARK:- Properties
+    var users = [User]()
+    
     //MARK:- NSUserDefaults
     //Store values saved in userdefaults
     private var username = UserDefaults.standard.object(forKey: "name") as? String

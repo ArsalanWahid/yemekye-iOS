@@ -10,22 +10,25 @@ import UIKit
 
 
 
-class Menu {
+class Menu{
     
     //MARK:- Properties
-    var resturant: Resturant
+    unowned let resturant: Resturant
     var category: [String]
     var mealItems:[MealItem]
     
     //MARK:- Initializers
     
     //failable initializer
-    init?(resturant: Resturant, category: [String] ,mealItems: [MealItem]){
+    init(resturant: Resturant ,category: [String] ,mealItems: [MealItem]){
         self.resturant = resturant
         self.category = category
         self.mealItems = mealItems
     }
  
+    deinit {
+        print("Menu for \(resturant) is deallocated")
+    }
     //MARK:- Questions
     
     //how will i tarck menu id ?

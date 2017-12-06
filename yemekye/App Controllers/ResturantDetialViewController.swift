@@ -18,11 +18,11 @@ class ResturantDetialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        resturantImage.image = resturants[cellIndex].resturantImage
-        returantName.text = resturants[cellIndex].name
-        resturantStatus.text = resturants[cellIndex].status
-        resturantAddress.text = resturants[cellIndex].address
-        resturantPhoneNumber.text = resturants[cellIndex].phoneNumber
+//        resturantImage.image = resturants[cellIndex].resturantImage
+//        returantName.text = resturants[cellIndex].name
+//        resturantStatus.text = resturants[cellIndex].status
+//        resturantAddress.text = resturants[cellIndex].address
+//        resturantPhoneNumber.text = resturants[cellIndex].phoneNumber
     }
 
     override func didReceiveMemoryWarning() {

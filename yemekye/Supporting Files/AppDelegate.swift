@@ -15,7 +15,7 @@
 //
 
 import UIKit
-
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -57,7 +57,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var status = LoginManager.LoginStatus.isLoggedIn
         UserDefaults.standard.set(status, forKey: "loginStatus")
         print(status)
+      
     }
+    
+    
+   
     
     
 }

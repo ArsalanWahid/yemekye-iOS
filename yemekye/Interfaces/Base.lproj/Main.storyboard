@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hmW-nZ-cWw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qbL-fK-8k8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -373,9 +373,9 @@
                     <connections>
                         <outlet property="contentPolicy" destination="hpa-ud-t22" id="gZV-gf-bHL"/>
                         <outlet property="cookiePolicy" destination="J3F-2R-CkI" id="APa-EU-Ibc"/>
-                        <outlet property="email" destination="Yal-E2-2lM" id="Dlv-6a-Vox"/>
-                        <outlet property="name" destination="eJl-Rz-9aq" id="qG7-8y-xhT"/>
-                        <outlet property="password" destination="bNI-5C-sfJ" id="mld-hE-WjP"/>
+                        <outlet property="emailTextField" destination="Yal-E2-2lM" id="wIw-aM-OOS"/>
+                        <outlet property="nameTextField" destination="eJl-Rz-9aq" id="ZTj-Kd-PfL"/>
+                        <outlet property="passwordTextField" destination="bNI-5C-sfJ" id="W9a-Im-XEd"/>
                         <outlet property="privacyPolicy" destination="wYk-Fe-k9J" id="l36-mk-y9j"/>
                         <outlet property="termsOfService" destination="8mb-Be-W2x" id="IXT-8s-4UR"/>
                     </connections>
@@ -623,22 +623,13 @@
             </objects>
             <point key="canvasLocation" x="897" y="2241"/>
         </scene>
-        <!--View Controller-->
+        <!--Display Plist View Controller-->
         <scene sceneID="lQw-jj-q3H">
             <objects>
-                <viewController id="qbL-fK-8k8" sceneMemberID="viewController">
+                <viewController id="qbL-fK-8k8" customClass="DisplayPlistViewController" customModule="yemekye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fsj-tc-ddq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1D-gx-LaN">
-                                <rect key="frame" x="16" y="323" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fS5-9z-HfI"/>
                     </view>

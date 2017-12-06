@@ -6,18 +6,18 @@
 //  Copyright © 2017 Arsalan Wahid Asghar. All rights reserved.
 //
 
-import Foundation
-
-
-
+import UIKit
 class Country {
     var name:String
-    var cities:[Cities]
-    init(name: String,cities: [Cities]) {
+    var cities:[City]?
+    init(name: String) {
         self.name = name
-        self.cities = cities
+    }
+    
+    func addCity(name: String){
+        self.cities?.append(City(name: name, country: self))
     }
     
     //Added Just one country with cities
-    static let existingCountries = Country(name: "Pakistan",cities: Cities.existingCities)
+    //static let existingCountries = Country(name: "Pakistan",cities: Cities.existingCities)
 }
