@@ -9,15 +9,9 @@
 import UIKit
 class Country {
     var name:String
-    var cities:[City]?
-    init(name: String) {
+    var cities:[City]
+    init(name: String , cities: [City]) {
         self.name = name
+        self.cities = cities
     }
-    
-    func addCity(name: String){
-        self.cities?.append(City(name: name, country: self))
-    }
-    
-    //Added Just one country with cities
-    //static let existingCountries = Country(name: "Pakistan",cities: Cities.existingCities)
 }
