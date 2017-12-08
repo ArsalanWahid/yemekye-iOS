@@ -26,7 +26,7 @@ class Data {
 //    }
     
     
-    private init(){
+    fileprivate init(){
         // Read plist from bundle and get Root Dictionary out of it
         var dictRoot: NSDictionary?
         if let path = Bundle.main.path(forResource: "data", ofType: "plist") {

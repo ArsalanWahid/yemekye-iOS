@@ -10,52 +10,21 @@ import UIKit
 
 
 
+
 class SignInViewController: UIViewController ,UITextFieldDelegate{
 
     
     //MARK:- Properties
     var users = [User]()
-    
-    //MARK:- NSUserDefaults
-    //Store values saved in userdefaults
-    private var username = UserDefaults.standard.object(forKey: "name") as? String
-    private var useremail = UserDefaults.standard.object(forKey: "email") as? String
-    private var userpasword = UserDefaults.standard.object(forKey: "password") as? String
-    
-    //MARK:- values to user
     var uemail:String = ""
     var upassword:String = ""
     
-    
-    //MARK:- OutLets
+    //MARK:- Outlets
     @IBOutlet weak var signInEmail: UITextField!
     @IBOutlet weak var signInPassword: UITextField!
     
-    
-    //MARK:- UIViewController
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.signInPassword.delegate = self
-        self.signInPassword.delegate = self
-        
-        
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
     //MARK:- Actions
-// if user name password matches then user is loggedin 
-  
+    // if user name password matches then user is loggedin
     @IBAction func signInUser(_ sender: UIButton) {
         if let email = signInEmail.text{
             var temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -78,13 +47,56 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
             print("User credentials dont match")
         }
         
-            //Will go back to loginmaster
-            self.dismiss(animated: true, completion: nil)
+        //Will go back to loginmaster
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelSignIn(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    //MARK:- NSUserDefaults
+    //Store values saved in userdefaults
+    private var username = UserDefaults.standard.object(forKey: "name") as? String
+    private var useremail = UserDefaults.standard.object(forKey: "email") as? String
+    private var userpasword = UserDefaults.standard.object(forKey: "password") as? String
+    
+    
+    //MARK:- UIViewController
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.signInPassword.delegate = self
+        self.signInPassword.delegate = self
+        
+        
+    }
+
+    //MARK:- UITextFieldDelegate
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    
+   
+    
+    
+   
+    
+ 
+   
+    
+    
+    
+
     
     
     

@@ -27,9 +27,25 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var cookiePolicy: UIButton!
     @IBOutlet weak var contentPolicy: UIButton!
     
+    //MARK:- Actions
+    
+    @IBAction func faceBookLogin(_ sender: UIButton) {
+        //IMPLEMENT LATER
+    }
+    
+    @IBAction func googleLogin(_ sender: UIButton) {
+        //IMPLEMENT LATER
+    }
+    
+    
+    @IBAction func cancelSignUP(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     
     //MARK:- UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nameTextField.delegate = self
@@ -47,11 +63,52 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
     
     
     
+    //MARK:- UITextFieldDelegate
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     
+    //MARK:- Naivgation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        let userName  = nameTextField.text ?? ""
+        let userEmail = emailTextField.text ?? ""
+        let userPassword = passwordTextField.text ?? ""
+        
+        user = User(name: userName, email: userEmail, password: userPassword, role: .customer)
+    }
+    
+    //    //MARK:- Actions
+    //    @IBAction func SignUpUser(_ sender: UIButton) {
+    //        //VALIDATE FIELDS ARE NOT EMPTY
+    //        if let name  = name.text{
+    //            var temp = name.trimmingCharacters(in: .whitespacesAndNewlines)
+    //            UserDefaults.standard.set(temp, forKey: "name")
+    //        }else{
+    //            print("value empty")
+    //        }
+    //
+    //        if let email = email.text{
+    //            var temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
+    //            UserDefaults.standard.set(temp, forKey: "email")
+    //        }else{
+    //            print("empty")
+    //        }
+    //
+    //        if let password = password.text{
+    //            var temp = password.trimmingCharacters(in: .whitespacesAndNewlines)
+    //            UserDefaults.standard.set(temp, forKey: "password")
+    //        }else{
+    //            print("Error in password")
+    //        }
+    //        UserDefaults.standard.synchronize() //Hard flush to disk
+    //
+    //        self.dismiss(animated: true, completion: nil)
+    //        //DISMISS VIEW AND SHOW LOGIN PAGE
+    //    }
+    //
     
     
     //MARL:- Private Functions
@@ -69,61 +126,8 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
     }
     
     
-    //MARK:- Naivgation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        let userName  = nameTextField.text ?? ""
-        let userEmail = emailTextField.text ?? ""
-        let userPassword = passwordTextField.text ?? ""
-        
-        user = User(name: userName, email: userEmail, password: userPassword, role: .customer)
-    }
     
-//    //MARK:- Actions
-//    @IBAction func SignUpUser(_ sender: UIButton) {
-//        //VALIDATE FIELDS ARE NOT EMPTY
-//        if let name  = name.text{
-//            var temp = name.trimmingCharacters(in: .whitespacesAndNewlines)
-//            UserDefaults.standard.set(temp, forKey: "name")
-//        }else{
-//            print("value empty")
-//        }
-//        
-//        if let email = email.text{
-//            var temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
-//            UserDefaults.standard.set(temp, forKey: "email")
-//        }else{
-//            print("empty")
-//        }
-//        
-//        if let password = password.text{
-//            var temp = password.trimmingCharacters(in: .whitespacesAndNewlines)
-//            UserDefaults.standard.set(temp, forKey: "password")
-//        }else{
-//            print("Error in password")
-//        }
-//        UserDefaults.standard.synchronize() //Hard flush to disk
-//        
-//        self.dismiss(animated: true, completion: nil)
-//        //DISMISS VIEW AND SHOW LOGIN PAGE
-//    }
-//    
   
-    //MARK:- Social Media Login
-    @IBAction func faceBookLogin(_ sender: UIButton) {
-        //IMPLEMENT LATER
-    }
-    
-    @IBAction func googleLogin(_ sender: UIButton) {
-        //IMPLEMENT LATER
-    }
-    
-    
-    @IBAction func cancelSignUP(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
-    
 }
 
 

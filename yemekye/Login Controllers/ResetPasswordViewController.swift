@@ -8,8 +8,21 @@
 
 import UIKit
 
+
+/*
+ TODO-LIST
+ 
+ -> Fix with AutoLayout
+ ->Add logic to change user password
+ 
+ 
+ */
+
+
 class ResetPasswordViewController: UIViewController {
 
+    
+    //MARK:- UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,9 +35,7 @@ class ResetPasswordViewController: UIViewController {
     }
     
 
-    @IBAction func dismiss(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
+    
     
     /*
     // MARK: - Navigation
