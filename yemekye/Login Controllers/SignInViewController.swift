@@ -66,7 +66,7 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
     //MARK:- UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.barTintColor = .red
         self.signInPassword.delegate = self
         self.signInPassword.delegate = self
         
@@ -74,8 +74,12 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
     }
 
     //MARK:- UITextFieldDelegate
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //On return key pressed on the keyboard this method will resign the current textfield first reponder and give it some appropriate object
+        signInEmail.resignFirstResponder()
+        signInPassword.resignFirstResponder()
+        return true
     }
     
     override func didReceiveMemoryWarning() {

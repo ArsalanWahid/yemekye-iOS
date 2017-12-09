@@ -65,7 +65,7 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
         
         //        //change the color of the nav bar here
         //        self.navigationController?.navigationBar.isHidden = false
-        //        navigationController?.navigationBar.barTintColor = .red
+        navigationController?.navigationBar.barTintColor = .red
         //        self.navigationItem.setHidesBackButton(true, animated: true)
         //       open.target = self.revealViewController()
         //        open.action = Selector("revealToggle:")

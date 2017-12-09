@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
     
         //hide Navigation Bar
         self.navigationController?.navigationBar.isHidden = true
-    
+        
     
         //        if LoginManager.LoginStatus.isLoggedIn == true{
         //            self.dismiss(animated: true, completion: nil)

@@ -15,6 +15,8 @@ class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDel
     //MARK:- UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = .red
+
         
     }
     

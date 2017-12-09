@@ -22,6 +22,7 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
+    
     @IBOutlet weak var termsOfService: UIButton!
     @IBOutlet weak var privacyPolicy: UIButton!
     @IBOutlet weak var cookiePolicy: UIButton!
@@ -51,7 +52,7 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
         self.nameTextField.delegate = self
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
-        
+        navigationController?.navigationBar.barTintColor = .red
         
         //Custom Buttons at Bottom screen
         termsOfService.setAttributedTitle(buttonUnderline("Terms of Service", 11), for: .normal)
@@ -64,10 +65,13 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
     
     
     //MARK:- UITextFieldDelegate
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //On return key pressed on the keyboard this method will resign the current textfield first reponder and give it some appropriate object
+        nameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
     }
-    
     
     //MARK:- Naivgation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -80,35 +84,38 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
         user = User(name: userName, email: userEmail, password: userPassword, role: .customer)
     }
     
-    //    //MARK:- Actions
-    //    @IBAction func SignUpUser(_ sender: UIButton) {
-    //        //VALIDATE FIELDS ARE NOT EMPTY
-    //        if let name  = name.text{
-    //            var temp = name.trimmingCharacters(in: .whitespacesAndNewlines)
-    //            UserDefaults.standard.set(temp, forKey: "name")
-    //        }else{
-    //            print("value empty")
-    //        }
-    //
-    //        if let email = email.text{
-    //            var temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
-    //            UserDefaults.standard.set(temp, forKey: "email")
-    //        }else{
-    //            print("empty")
-    //        }
-    //
-    //        if let password = password.text{
-    //            var temp = password.trimmingCharacters(in: .whitespacesAndNewlines)
-    //            UserDefaults.standard.set(temp, forKey: "password")
-    //        }else{
-    //            print("Error in password")
-    //        }
-    //        UserDefaults.standard.synchronize() //Hard flush to disk
-    //
-    //        self.dismiss(animated: true, completion: nil)
-    //        //DISMISS VIEW AND SHOW LOGIN PAGE
-    //    }
-    //
+        //MARK:- Actions
+    
+    
+    //This should either goto API or core data
+//        @IBAction func SignUpUser(_ sender: UIButton) {
+//            //VALIDATE FIELDS ARE NOT EMPTY
+//            if let name  = name.text{
+//                var temp = name.trimmingCharacters(in: .whitespacesAndNewlines)
+//                UserDefaults.standard.set(temp, forKey: "name")
+//            }else{
+//                print("value empty")
+//            }
+//    
+//            if let email = email.text{
+//                var temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
+//                UserDefaults.standard.set(temp, forKey: "email")
+//            }else{
+//                print("empty")
+//            }
+//    
+//            if let password = password.text{
+//                var temp = password.trimmingCharacters(in: .whitespacesAndNewlines)
+//                UserDefaults.standard.set(temp, forKey: "password")
+//            }else{
+//                print("Error in password")
+//            }
+//            UserDefaults.standard.synchronize() //Hard flush to disk
+//    
+//            self.dismiss(animated: true, completion: nil)
+//            //DISMISS VIEW AND SHOW LOGIN PAGE
+//        }
+    
     
     
     //MARL:- Private Functions

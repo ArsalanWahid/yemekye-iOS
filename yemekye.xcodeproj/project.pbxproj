@@ -220,9 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				D7F124AF1F9C8F50000491D4 /* Info.plist */,
+				D74FE3DB1FA33FB400B533AB /* Interfaces */,
 				D7AF08A21FDAE4BD0095E58B /* singleton */,
 				D7A7B77B1FD71F5E00F31155 /* Models */,
-				D74FE3DB1FA33FB400B533AB /* Interfaces */,
 				D74FE3DC1FA33FCD00B533AB /* Supporting Files */,
 				D74FE3D91FA33F8200B533AB /* Login Controllers */,
 				D74FE3DA1FA33FA500B533AB /* App Controllers */,
