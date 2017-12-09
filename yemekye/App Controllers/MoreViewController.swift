@@ -29,6 +29,7 @@ class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = options[indexPath.row]
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     

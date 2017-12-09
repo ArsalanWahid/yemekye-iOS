@@ -128,6 +128,7 @@ extension mainViewController{
             let cell = Bundle.main.loadNibNamed("PromotionsTableViewCell", owner: self, options: nil)?.first as! PromotionsTableViewCell
             
             cell.promotionsLabel.text = "Promotions"
+            cell.accessoryType = .disclosureIndicator
             return cell
         }
         
@@ -136,6 +137,7 @@ extension mainViewController{
             
             cell.promotionsLabel.text = "Developers"
             cell.promotionsImage.image = UIImage(named: "laptop.png")
+            cell.accessoryType = .disclosureIndicator
             return cell
         }
         
