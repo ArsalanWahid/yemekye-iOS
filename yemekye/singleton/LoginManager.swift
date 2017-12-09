@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+//MARK:- Singleton
 class LoginManager{
     
     

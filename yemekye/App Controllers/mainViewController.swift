@@ -47,8 +47,6 @@ var user :User? = User(name: "arsalan", email: "arsalanwahid1993@gmail.com", pas
 
 
 var cellIndex = 0
-var resturants = [Resturant]()
-
 //VIEW CONTROLLER CODE STARTS HERE
 class mainViewController: UIViewController , UITableViewDelegate,UITableViewDataSource{
     
@@ -72,7 +70,7 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
         //       open.target = self.revealViewController()
         //        open.action = Selector("revealToggle:")
         
-     preloadResturantData()
+     
      
     }
     
@@ -94,52 +92,6 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
        performSegue(withIdentifier: "loginScreenFromResturant", sender: nil)
        // self.navigationController?.popToViewController(LoginViewController(), animated: true)
     }
-    
-
-    
-
-  
-    //Private Functions
-    private func preloadResturantData() {
-        
-        let bundle = Bundle(for: type(of: self))
-        let kfc1 = UIImage(named: "krunchburger", in: bundle, compatibleWith: self.traitCollection)
-        let kfc2 = UIImage(named:"mightyzinger", in: bundle, compatibleWith: self.traitCollection)
-        let kfc3 = UIImage(named:"zinger", in: bundle, compatibleWith: self.traitCollection)
-        let kfclogo = UIImage(named: "kfc", in: bundle, compatibleWith: self.traitCollection)
-        
-        guard let mealKFC1 = Meal(name: "Mighty Burger", photo: kfc1, rating: 2) else{
-            fatalError("Something bad happened while making meal object")}
-        
-        guard let mealKFC2 = Meal(name: "Zinger Love", photo: kfc2, rating: 4) else{
-            fatalError("Something bad happened while making meal object")
-        }
-        
-        guard let mealKFC3 = Meal(name: "Random Stuff", photo: kfc3, rating: 5) else{
-            fatalError("Something bad happened while presenting tasty salad")
-        }
-        
-        let macdonalslogo = UIImage(named: "mcdonalds", in: bundle, compatibleWith: self.traitCollection)
-        
-        let kfcMenu = Menu(meals: [mealKFC1,mealKFC2,mealKFC3])
-       
-        
-        let KFC = Resturant(name: "Kfc", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 5)
-        
-        let KFC1 = Resturant(name: "McDonalds", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: macdonalslogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 4)
-        
-        let KFC2 = Resturant(name: "Dominos", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113", rating: 4)
-        
-        let KFC3 = Resturant(name: "Subway", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 3)
-        
-        var karachi = City(name: "karachi", resturants: [KFC!])
-        
-        var pakistan = Country(name: "pakistan", cities: [karachi])
-        
-        resturants += [KFC!,KFC1!,KFC2!,KFC3!]
-    }
-    
-    
     
 }
 
@@ -252,10 +204,10 @@ extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryBoard.resturantCell, for: indexPath) as! ResturantsCollectionViewCell
         
-        cell.image = resturants[indexPath.row].resturantImage
-        cell.nameLabel.text = resturants[indexPath.row].name
-        cell.addressLabel.text = resturants[indexPath.row].address
-        cell.rating.text = String(resturants[indexPath.row].rating)
+        cell.image = RData.Rdata.resturants[indexPath.row].resturantImage
+        cell.nameLabel.text = RData.Rdata.resturants[indexPath.row].name
+        cell.addressLabel.text = RData.Rdata.resturants[indexPath.row].address
+        cell.rating.text = String(RData.Rdata.resturants[indexPath.row].rating)
         return cell
         
     }

@@ -45,13 +45,13 @@ class ResturantDetialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      image.image = resturants[cellIndex].resturantImage
-      name.text = resturants[cellIndex].name
-      address.text = resturants[cellIndex].address
-      rating.text = String(resturants[cellIndex].rating)
-      status.text = resturants[cellIndex].status
-      let t1 = resturants[cellIndex].timing[0]
-      let t2 = resturants[cellIndex].timing[1]
+      image.image = RData.Rdata.resturants[cellIndex].resturantImage
+      name.text = RData.Rdata.resturants[cellIndex].name
+      address.text = RData.Rdata.resturants[cellIndex].address
+      rating.text = String(RData.Rdata.resturants[cellIndex].rating)
+      status.text = RData.Rdata.resturants[cellIndex].status
+      let t1 = RData.Rdata.resturants[cellIndex].timing[0]
+        _ = RData.Rdata.resturants[cellIndex].timing[1]
       timing.text = "\(t1) - \(t1)"
       menu.text = "To be displayed"
       
@@ -66,7 +66,7 @@ class ResturantDetialViewController: UIViewController {
     
     @IBAction func callResturant(_ sender: Any) {
         
-        let url :NSURL = NSURL(string: "tel://\(resturants[cellIndex].phoneNumber)")!
+        let url :NSURL = NSURL(string: "tel://\(RData.Rdata.resturants[cellIndex].phoneNumber)")!
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         
     

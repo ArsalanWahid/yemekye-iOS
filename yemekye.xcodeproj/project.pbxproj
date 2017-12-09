@@ -22,6 +22,7 @@
 		D742F67C1FDC194F0007A970 /* PromotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742F67B1FDC194F0007A970 /* PromotionsViewController.swift */; };
 		D742F67F1FDC1D600007A970 /* WelcomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742F67D1FDC1D600007A970 /* WelcomeTableViewCell.swift */; };
 		D742F6801FDC1D600007A970 /* WelcomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D742F67E1FDC1D600007A970 /* WelcomeTableViewCell.xib */; };
+		D742F6821FDC22D10007A970 /* resturantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742F6811FDC22D10007A970 /* resturantData.swift */; };
 		D75F12DC1FD7E30700AE58CC /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75F12DB1FD7E30700AE58CC /* data.plist */; };
 		D75F12DE1FD7E84E00AE58CC /* DisplayPlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75F12DD1FD7E84E00AE58CC /* DisplayPlistViewController.swift */; };
 		D75F12E01FD801CA00AE58CC /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75F12DF1FD801CA00AE58CC /* data.swift */; };
@@ -60,6 +61,7 @@
 		D742F67B1FDC194F0007A970 /* PromotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsViewController.swift; sourceTree = "<group>"; };
 		D742F67D1FDC1D600007A970 /* WelcomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTableViewCell.swift; sourceTree = "<group>"; };
 		D742F67E1FDC1D600007A970 /* WelcomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeTableViewCell.xib; sourceTree = "<group>"; };
+		D742F6811FDC22D10007A970 /* resturantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resturantData.swift; sourceTree = "<group>"; };
 		D75F12DB1FD7E30700AE58CC /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		D75F12DD1FD7E84E00AE58CC /* DisplayPlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPlistViewController.swift; sourceTree = "<group>"; };
 		D75F12DF1FD801CA00AE58CC /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				D7C9CA971FAC90A5006A2026 /* LoginManager.swift */,
 				D75F12DF1FD801CA00AE58CC /* data.swift */,
+				D742F6811FDC22D10007A970 /* resturantData.swift */,
 			);
 			path = singleton;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				D7B78C881FD57A9300A9CEC8 /* MoreViewController.swift in Sources */,
 				D72439471FD6A70D00BB5A40 /* Menu.swift in Sources */,
 				D742F67C1FDC194F0007A970 /* PromotionsViewController.swift in Sources */,
+				D742F6821FDC22D10007A970 /* resturantData.swift in Sources */,
 				D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */,
 				D7C9CA981FAC90A5006A2026 /* LoginManager.swift in Sources */,
 				D762275D1FA8C10B007B82E7 /* ResetPasswordViewController.swift in Sources */,
