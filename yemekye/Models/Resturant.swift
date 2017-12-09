@@ -18,11 +18,11 @@ class Resturant{
     var status: String
     var address: String
     var phoneNumber: String
-    
+    var rating: Int
     
     //The mighty Restuart Object
     //Failable as some parameteres cannot be nil
-    init?(name: String,menu: Menu,timings:[String],resturantImage:UIImage, status:String, address:String, phonenumber:String) {
+    init?(name: String,menu: Menu,timings:[String],resturantImage:UIImage, status:String, address:String, phonenumber:String,rating: Int) {
         
         
         //Resturant name cannot be nil
@@ -43,6 +43,7 @@ class Resturant{
         self.status = status
         self.address = address
         self.phoneNumber = phonenumber
+        self.rating = rating
     }
     
 }

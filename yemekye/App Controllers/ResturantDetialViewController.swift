@@ -33,19 +33,28 @@ import UIKit
 
 class ResturantDetialViewController: UIViewController {
 
-    @IBOutlet weak var resturantImage: UIImageView!
-    @IBOutlet weak var returantName: UILabel!
-    @IBOutlet weak var resturantStatus: UILabel!
-    @IBOutlet weak var resturantAddress: UILabel!
-    @IBOutlet weak var resturantPhoneNumber: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var timing: UILabel!
+    @IBOutlet weak var menu: UILabel!
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        resturantImage.image = resturants[cellIndex].resturantImage
-//        returantName.text = resturants[cellIndex].name
-//        resturantStatus.text = resturants[cellIndex].status
-//        resturantAddress.text = resturants[cellIndex].address
-//        resturantPhoneNumber.text = resturants[cellIndex].phoneNumber
+        
+      image.image = resturants[cellIndex].resturantImage
+      name.text = resturants[cellIndex].name
+      address.text = resturants[cellIndex].address
+      rating.text = String(resturants[cellIndex].rating)
+      status.text = resturants[cellIndex].status
+      let t1 = resturants[cellIndex].timing[0]
+      let t2 = resturants[cellIndex].timing[1]
+      timing.text = "\(t1) - \(t1)"
+      menu.text = "To be displayed"
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,5 +62,14 @@ class ResturantDetialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    //MARK:- Actions
+    
+    @IBAction func callResturant(_ sender: Any) {
+        
+        let url :NSURL = NSURL(string: "tel://\(resturants[cellIndex].phoneNumber)")!
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        
+    
+    }
+    
 }

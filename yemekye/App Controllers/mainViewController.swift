@@ -47,20 +47,19 @@ var user :User? = User(name: "arsalan", email: "arsalanwahid1993@gmail.com", pas
 
 
 var cellIndex = 0
-
-
 var resturants = [Resturant]()
 
 //VIEW CONTROLLER CODE STARTS HERE
-class mainViewController: UIViewController {
+class mainViewController: UIViewController , UITableViewDelegate,UITableViewDataSource{
     
-    //MARK:- Properties
     
-    var _menuOpen = false
     
-    //MARK:- OUTLETS
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
-    
+    struct StoryBoard{
+        static let resturantCell = "resturantCell"
+        static let promotionsCell = "promotionscCell"
+        static let developerCell = "developerCell"
+        static let welcomeCell = "welcomeCell"
+    }
     
     //MARK:- UIViewController
     override func viewDidLoad() {
@@ -73,9 +72,8 @@ class mainViewController: UIViewController {
         //       open.target = self.revealViewController()
         //        open.action = Selector("revealToggle:")
         
-        //GESTURE FOR FOR SIDE MENU
-        // self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
+     preloadResturantData()
+     
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -98,36 +96,12 @@ class mainViewController: UIViewController {
     }
     
 
-    //MARK:- Table DataSources
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resturants.count
-
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = Bundle.main.loadNibNamed("ResturantCell1", owner: self, options: nil)?.first as! ResturantCell1
-        cell.ResturantImage.image = resturants[indexPath.row].resturantImage
-        cell.ResturantName.text = resturants[indexPath.row].name
-       return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        cellIndex = indexPath.row
-        print("The index path at MainviewContriller is \(indexPath.row)")
-        performSegue(withIdentifier: "resturantDetial", sender: self)
-    }
 
   
     //Private Functions
     private func preloadResturantData() {
         
-        
-    
         let bundle = Bundle(for: type(of: self))
         let kfc1 = UIImage(named: "krunchburger", in: bundle, compatibleWith: self.traitCollection)
         let kfc2 = UIImage(named:"mightyzinger", in: bundle, compatibleWith: self.traitCollection)
@@ -145,19 +119,166 @@ class mainViewController: UIViewController {
             fatalError("Something bad happened while presenting tasty salad")
         }
         
+        let macdonalslogo = UIImage(named: "mcdonalds", in: bundle, compatibleWith: self.traitCollection)
         
         let kfcMenu = Menu(meals: [mealKFC1,mealKFC2,mealKFC3])
        
         
-        let KFC = Resturant(name: "Kfc", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113")
+        let KFC = Resturant(name: "Kfc", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 5)
+        
+        let KFC1 = Resturant(name: "McDonalds", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: macdonalslogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 4)
+        
+        let KFC2 = Resturant(name: "Dominos", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113", rating: 4)
+        
+        let KFC3 = Resturant(name: "Subway", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 3)
         
         var karachi = City(name: "karachi", resturants: [KFC!])
         
         var pakistan = Country(name: "pakistan", cities: [karachi])
+        
+        resturants += [KFC!,KFC1!,KFC2!,KFC3!]
     }
     
     
     
 }
+
+
+//MARK:- Table DataSources
+extension mainViewController{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 4
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+/*Use when loading from custom xib file*/
+        
+//        let cell  = Bundle.main.loadNibNamed("ResturantCell1", owner: self, options: nil)?.first as! ResturantCell1
+//        cell.ResturantImage.image = resturants[indexPath.row].resturantImage
+//        cell.ResturantName.text = resturants[indexPath.row].name
+//        return cell
+        
+        if indexPath.row == 0 {
+            let cell  = tableView.dequeueReusableCell(withIdentifier: StoryBoard.welcomeCell,for: indexPath) as! WelcomeTableViewCell
+            cell.welcomeLabel.text = "Welcome to Yemek Ye !"
+            return cell
+        }
+       
+        if indexPath.row == 1{
+            let cell = tableView.dequeueReusableCell(withIdentifier: StoryBoard.resturantCell, for: indexPath) as! ResturantsTableViewCell
+            return cell
+        }
+        
+        if indexPath.row == 2{
+            let cell = Bundle.main.loadNibNamed("PromotionsTableViewCell", owner: self, options: nil)?.first as! PromotionsTableViewCell
+            
+            cell.promotionsLabel.text = "Promotions"
+            return cell
+        }
+        
+        if indexPath.row == 3{
+            let cell = Bundle.main.loadNibNamed("PromotionsTableViewCell", owner: self, options: nil)?.first as! PromotionsTableViewCell
+            
+            cell.promotionsLabel.text = "Developers"
+            cell.promotionsImage.image = UIImage(named: "laptop.png")
+            return cell
+        }
+        
+        
+        return UITableViewCell()
+    }
+    
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == 1{
+            if let cell = cell as? ResturantsTableViewCell{
+                cell.collectionView.dataSource = self
+                cell.collectionView.delegate = self
+                cell.collectionView.reloadData()
+                cell.collectionView.isScrollEnabled = false
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.row == 0 {
+            return 100}
+        
+        if indexPath.row == 1{
+            return tableView.bounds.width + 55
+        }else{
+            return UITableViewAutomaticDimension
+        }
+        
+        
+    }
+    //When user selects the table View cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        if indexPath.row == 0 {
+            print("Welcome screen clicked")
+        }
+        
+        if indexPath.row == 2{
+            print("developers here")
+        }
+        
+        if indexPath.row == 3 {
+            print("developers Screen Clicked")
+        }
+    }
+    
+    //Set the view for the footer in tableview
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
+    }
+    
+}
+
+//MARK:- UICollectionViewDataSource
+extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
+    
+    //This will show the 4 resturants
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+   
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryBoard.resturantCell, for: indexPath) as! ResturantsCollectionViewCell
+        
+        cell.image = resturants[indexPath.row].resturantImage
+        cell.nameLabel.text = resturants[indexPath.row].name
+        cell.addressLabel.text = resturants[indexPath.row].address
+        cell.rating.text = String(resturants[indexPath.row].rating)
+        return cell
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        cellIndex = indexPath.row
+        performSegue(withIdentifier: "resturantDetail", sender: nil)
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+//        layout.minimumLineSpacing = 5.0
+//        layout.minimumInteritemSpacing = 2.0
+//        let itemsPerRow:CGFloat = 2.0
+//        let itemWidth = collectionView.bounds.width - layout.minimumLineSpacing / itemsPerRow
+//        return CGSize(width: itemWidth, height: itemWidth)
+//
+//    }
+//
+//
+}
+
+
 
 
