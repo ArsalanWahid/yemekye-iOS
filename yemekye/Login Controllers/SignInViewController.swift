@@ -27,13 +27,13 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
     // if user name password matches then user is loggedin
     @IBAction func signInUser(_ sender: UIButton) {
         if let email = signInEmail.text{
-            var temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
+            let temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
             uemail = temp
         }else{
             print("Nothing entered")
         }
         if let password = signInPassword.text{
-            var temp = password.trimmingCharacters(in: .whitespacesAndNewlines)
+            let temp = password.trimmingCharacters(in: .whitespacesAndNewlines)
             upassword = temp
         }else{
             print("empty")
