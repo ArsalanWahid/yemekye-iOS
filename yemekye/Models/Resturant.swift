@@ -24,7 +24,6 @@ class Resturant{
     //Failable as some parameteres cannot be nil
     init?(name: String,menu: Menu,timings:[String],resturantImage:UIImage, status:String, address:String, phonenumber:String,rating: Int) {
         
-        
         //Resturant name cannot be nil
         guard !name.isEmpty else {
             return nil

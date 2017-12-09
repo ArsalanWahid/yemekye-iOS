@@ -13,8 +13,10 @@ class City{
     
     var name: String
     var resturants: [Resturant]
+    
     init(name: String,resturants:[Resturant]) {
         self.name = name
         self.resturants = resturants
     }
+    
 }

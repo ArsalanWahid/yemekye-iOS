@@ -19,9 +19,9 @@ class Menu{
     
     //failable initializer
     init(meals: [Meal]){
-       self.meals = meals
+        self.meals = meals
     }
- 
+    
     //MARK:- Questions
     
     //how will i tarck menu id ?

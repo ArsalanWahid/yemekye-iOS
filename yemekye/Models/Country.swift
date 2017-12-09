@@ -10,6 +10,8 @@ import UIKit
 class Country {
     var name:String
     var cities:[City]
+    
+    
     init(name: String , cities: [City]) {
         self.name = name
         self.cities = cities

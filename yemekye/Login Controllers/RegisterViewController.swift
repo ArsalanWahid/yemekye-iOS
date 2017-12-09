@@ -65,6 +65,12 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
     
     
     //MARK:- UITextFieldDelegate
+    
+    //close Keyboard when user taps screen
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //On return key pressed on the keyboard this method will resign the current textfield first reponder and give it some appropriate object
         nameTextField.resignFirstResponder()

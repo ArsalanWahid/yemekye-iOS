@@ -10,7 +10,7 @@ import UIKit
 
 class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
-    var options = ["settings","Add Resturant"]
+    var options = ["settings","Add Resturant","App Website"]
     
     //MARK:- UIViewController
     override func viewDidLoad() {
@@ -40,10 +40,18 @@ class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDel
             
         }else if indexPath.row == 1{
             performSegue(withIdentifier: "AddResturant", sender: nil)
+        }else if indexPath.row == 2{
+           openWebsite()
         }
+        
+        
+        
     }
     
-    
+    //MARK:- Private Functions
+    private func openWebsite(){
+        UIApplication.shared.openURL(URL(string: "http://yemekye-com.stackstaging.com/wordpress/")!)
+    }
     
     //MARK:-Actions
     @IBAction func logOut(_ sender: UIBarButtonItem) {

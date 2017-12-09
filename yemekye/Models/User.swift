@@ -22,7 +22,6 @@ class User{
     var password :String
     var role :Role
     
-    
     init?(name:String, email:String, password:String, role:Role) {
         
         guard !name.isEmpty else {
@@ -43,5 +42,4 @@ class User{
         self.role = role
     }
     
-
 }

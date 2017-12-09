@@ -12,7 +12,7 @@ import UIKit
 
 
 class SignInViewController: UIViewController ,UITextFieldDelegate{
-
+    
     
     //MARK:- Properties
     var users = [User]()
@@ -69,17 +69,6 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
         navigationController?.navigationBar.barTintColor = .red
         self.signInPassword.delegate = self
         self.signInPassword.delegate = self
-        
-        
-    }
-
-    //MARK:- UITextFieldDelegate
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //On return key pressed on the keyboard this method will resign the current textfield first reponder and give it some appropriate object
-        signInEmail.resignFirstResponder()
-        signInPassword.resignFirstResponder()
-        return true
     }
     
     override func didReceiveMemoryWarning() {
@@ -88,20 +77,18 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
     }
     
     
+    //MARK:- UITextFieldDelegate
     
+    //close Keyboard when user taps screen
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
-   
-    
-    
-   
-    
- 
-   
-    
-    
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //On return key pressed on the keyboard this method will resign the current textfield first reponder and give it some appropriate object
+        signInEmail.resignFirstResponder()
+        signInPassword.resignFirstResponder()
+        return true
+    }
 
-    
-    
-    
 }

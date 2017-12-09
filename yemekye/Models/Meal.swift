@@ -9,13 +9,13 @@
 import UIKit
 
 class Meal{
-//MARK:- Properties
-var name: String
-var photo: UIImage?
-var rating: Int
+    //MARK:- Properties
+    var name: String
+    var photo: UIImage?
+    var rating: Int
 
-//The ? means that this is a failable initializer
-init?(name: String, photo: UIImage?, rating: Int) {
+    //The ? means that this is a failable initializer
+    init?(name: String, photo: UIImage?, rating: Int) {
     
     //Name must not be empty
     guard !name.isEmpty else{
@@ -31,6 +31,6 @@ init?(name: String, photo: UIImage?, rating: Int) {
     self.photo = photo
     self.rating = rating
     
-}
+    }
 }
 
