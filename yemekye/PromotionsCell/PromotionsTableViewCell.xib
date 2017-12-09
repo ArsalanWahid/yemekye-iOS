@@ -19,27 +19,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promotions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eln-1l-7vL">
-                        <rect key="frame" x="9" y="23" width="233" height="33.5"/>
+                        <rect key="frame" x="9" y="23" width="178" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift" translatesAutoresizingMaskIntoConstraints="NO" id="EQC-5K-4yF">
-                        <rect key="frame" x="250" y="7" width="64" height="64"/>
+                        <rect key="frame" x="195" y="14" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="64" id="NAc-VJ-SGS"/>
-                            <constraint firstAttribute="height" constant="64" id="VSW-C4-oNO"/>
+                            <constraint firstAttribute="width" constant="50" id="NAc-VJ-SGS"/>
+                            <constraint firstAttribute="height" constant="50" id="VSW-C4-oNO"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="EQC-5K-4yF" firstAttribute="leading" secondItem="eln-1l-7vL" secondAttribute="trailing" constant="8" id="CDM-4g-OFk"/>
                     <constraint firstItem="eln-1l-7vL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="FXN-qc-jlL"/>
-                    <constraint firstAttribute="bottom" secondItem="EQC-5K-4yF" secondAttribute="bottom" constant="8.5" id="JXv-4w-WAA"/>
+                    <constraint firstAttribute="bottom" secondItem="EQC-5K-4yF" secondAttribute="bottom" constant="15.5" id="JXv-4w-WAA"/>
                     <constraint firstAttribute="bottom" secondItem="eln-1l-7vL" secondAttribute="bottom" constant="23" id="KO8-w7-QxX"/>
-                    <constraint firstItem="EQC-5K-4yF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="afY-le-ngG"/>
+                    <constraint firstItem="EQC-5K-4yF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="afY-le-ngG"/>
                     <constraint firstItem="eln-1l-7vL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="bwi-oU-Azp"/>
-                    <constraint firstAttribute="trailing" secondItem="EQC-5K-4yF" secondAttribute="trailing" constant="6" id="xbz-JI-n0p"/>
+                    <constraint firstAttribute="trailing" secondItem="EQC-5K-4yF" secondAttribute="trailing" constant="75" id="xbz-JI-n0p"/>
                     <constraint firstItem="EQC-5K-4yF" firstAttribute="leading" secondItem="eln-1l-7vL" secondAttribute="trailing" constant="8" id="z3M-g1-HOG"/>
                 </constraints>
             </tableViewCellContentView>
