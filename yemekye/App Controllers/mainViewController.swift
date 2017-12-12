@@ -116,6 +116,7 @@ extension mainViewController{
         if indexPath.row == 0 {
             let cell  = tableView.dequeueReusableCell(withIdentifier: StoryBoard.welcomeCell,for: indexPath) as! WelcomeTableViewCell
             cell.welcomeLabel.text = "Welcome to Yemek Ye !"
+            cell.selectionStyle = UITableViewCellSelectionStyle.none  
             return cell
         }
        
@@ -174,6 +175,7 @@ extension mainViewController{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
         if indexPath.row == 0 {
+            
             print("Welcome screen clicked")
         }
         
