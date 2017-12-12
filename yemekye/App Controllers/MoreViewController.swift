@@ -51,7 +51,11 @@ class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDel
     
     //MARK:- Private Functions
     private func openWebsite(){
-        UIApplication.shared.openURL(URL(string: "http://yemekye-com.stackstaging.com/wordpress/")!)
+        
+        let url: URL = URL(string: "http://yemekye-com.stackstaging.com/wordpress/")!
+//        UIApplication.shared.openURL(URL(string: "http://yemekye-com.stackstaging.com/wordpress/")!)
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
     //MARK:-Actions
