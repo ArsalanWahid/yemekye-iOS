@@ -54,9 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         
-        var status = LoginManager.LoginStatus.isLoggedIn
-        UserDefaults.standard.set(status, forKey: "loginStatus")
-        print(status)
+       
       
     }
     
