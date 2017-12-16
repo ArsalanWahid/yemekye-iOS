@@ -76,10 +76,13 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         //This will navigate to login screen initiall as zamato does
+        
         if LoginManager.LoginStatus.isLoggedIn == false{
+            UIView.setAnimationsEnabled(false)
             performSegue(withIdentifier: "loginScreenFromResturant", sender: nil)
-        }else{
             
+        }else{
+            UIView.setAnimationsEnabled(true)
         }
         
         
@@ -126,6 +129,7 @@ extension mainViewController{
         }
         
         if indexPath.row == 2{
+            //Custom nib file for this cell
             let cell = Bundle.main.loadNibNamed("PromotionsTableViewCell", owner: self, options: nil)?.first as! PromotionsTableViewCell
             
             cell.promotionsLabel.text = "Promotions"

@@ -14,9 +14,14 @@
 		D72439471FD6A70D00BB5A40 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72439461FD6A70D00BB5A40 /* Menu.swift */; };
 		D724394D1FD6AAC500BB5A40 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724394C1FD6AAC500BB5A40 /* Country.swift */; };
 		D724394F1FD6AB0900BB5A40 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724394E1FD6AB0900BB5A40 /* Cities.swift */; };
+		D725B6F71FE421BD006B802B /* ActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D725B6F51FE421BD006B802B /* ActionsTableViewCell.swift */; };
+		D725B6F81FE421BD006B802B /* ActionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D725B6F61FE421BD006B802B /* ActionsTableViewCell.xib */; };
+		D725B6FA1FE54D86006B802B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D725B6F91FE54D85006B802B /* GoogleService-Info.plist */; };
 		D726AD601F9CC6FB00C37CFA /* ResturantCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AD5E1F9CC6FB00C37CFA /* ResturantCell1.swift */; };
 		D726AD611F9CC6FB00C37CFA /* ResturantCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D726AD5F1F9CC6FB00C37CFA /* ResturantCell1.xib */; };
 		D726AD691F9CCBFE00C37CFA /* ResturantDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */; };
+		D740F32E1FE2C20300D564D1 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D740F32C1FE2C20300D564D1 /* InfoTableViewCell.swift */; };
+		D740F32F1FE2C20300D564D1 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D740F32D1FE2C20300D564D1 /* InfoTableViewCell.xib */; };
 		D742F6781FDC12D50007A970 /* PromotionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742F6761FDC12D50007A970 /* PromotionsTableViewCell.swift */; };
 		D742F6791FDC12D50007A970 /* PromotionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D742F6771FDC12D50007A970 /* PromotionsTableViewCell.xib */; };
 		D742F67C1FDC194F0007A970 /* PromotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742F67B1FDC194F0007A970 /* PromotionsViewController.swift */; };
@@ -53,9 +58,14 @@
 		D72439461FD6A70D00BB5A40 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		D724394C1FD6AAC500BB5A40 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		D724394E1FD6AB0900BB5A40 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		D725B6F51FE421BD006B802B /* ActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsTableViewCell.swift; sourceTree = "<group>"; };
+		D725B6F61FE421BD006B802B /* ActionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionsTableViewCell.xib; sourceTree = "<group>"; };
+		D725B6F91FE54D85006B802B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D726AD5E1F9CC6FB00C37CFA /* ResturantCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCell1.swift; sourceTree = "<group>"; };
 		D726AD5F1F9CC6FB00C37CFA /* ResturantCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResturantCell1.xib; sourceTree = "<group>"; };
 		D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetialViewController.swift; sourceTree = "<group>"; };
+		D740F32C1FE2C20300D564D1 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		D740F32D1FE2C20300D564D1 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
 		D742F6761FDC12D50007A970 /* PromotionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsTableViewCell.swift; sourceTree = "<group>"; };
 		D742F6771FDC12D50007A970 /* PromotionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionsTableViewCell.xib; sourceTree = "<group>"; };
 		D742F67B1FDC194F0007A970 /* PromotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +130,10 @@
 				D726AD5F1F9CC6FB00C37CFA /* ResturantCell1.xib */,
 				D7AF08A31FDAE7190095E58B /* ResturantsTableViewCell.swift */,
 				D7AF08A51FDAE7C90095E58B /* ResturantsCollectionViewCell.swift */,
+				D740F32C1FE2C20300D564D1 /* InfoTableViewCell.swift */,
+				D740F32D1FE2C20300D564D1 /* InfoTableViewCell.xib */,
+				D725B6F51FE421BD006B802B /* ActionsTableViewCell.swift */,
+				D725B6F61FE421BD006B802B /* ActionsTableViewCell.xib */,
 			);
 			path = "Resturant Cells";
 			sourceTree = "<group>";
@@ -220,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				D7F124AF1F9C8F50000491D4 /* Info.plist */,
+				D725B6F91FE54D85006B802B /* GoogleService-Info.plist */,
 				D74FE3DB1FA33FB400B533AB /* Interfaces */,
 				D7AF08A21FDAE4BD0095E58B /* singleton */,
 				D7A7B77B1FD71F5E00F31155 /* Models */,
@@ -303,7 +318,10 @@
 				D726AD611F9CC6FB00C37CFA /* ResturantCell1.xib in Resources */,
 				D7F124AE1F9C8F50000491D4 /* LaunchScreen.storyboard in Resources */,
 				D7F124AB1F9C8F50000491D4 /* Assets.xcassets in Resources */,
+				D725B6F81FE421BD006B802B /* ActionsTableViewCell.xib in Resources */,
 				D75F12DC1FD7E30700AE58CC /* data.plist in Resources */,
+				D740F32F1FE2C20300D564D1 /* InfoTableViewCell.xib in Resources */,
+				D725B6FA1FE54D86006B802B /* GoogleService-Info.plist in Resources */,
 				D7F124A91F9C8F50000491D4 /* Main.storyboard in Resources */,
 				D742F6791FDC12D50007A970 /* PromotionsTableViewCell.xib in Resources */,
 			);
@@ -390,6 +408,8 @@
 				D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */,
 				D7F124A41F9C8F50000491D4 /* AppDelegate.swift in Sources */,
 				D742F6781FDC12D50007A970 /* PromotionsTableViewCell.swift in Sources */,
+				D740F32E1FE2C20300D564D1 /* InfoTableViewCell.swift in Sources */,
+				D725B6F71FE421BD006B802B /* ActionsTableViewCell.swift in Sources */,
 				D724394F1FD6AB0900BB5A40 /* Cities.swift in Sources */,
 				D7109E851FD5C3150019E779 /* SettingViewController.swift in Sources */,
 				D72439411FD6A52600BB5A40 /* User.swift in Sources */,
