@@ -31,30 +31,22 @@ import UIKit
 
 
 
-class ResturantDetialViewController: UIViewController {
+class ResturantDetialViewController: UIViewController{
 
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var rating: UILabel!
-    @IBOutlet weak var status: UILabel!
-    @IBOutlet weak var timing: UILabel!
-    @IBOutlet weak var menu: UILabel!
   
     
+    struct restuarntDetailCells{
+        static let infoCell = "infoCell"
+        static let actionsCell = "actionsCell"
+        static let amenitiesCell = "amenitiesCell"
+    }
+    
+    //MARK:- UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      image.image = RData.Rdata.resturants[cellIndex].resturantImage
-      name.text = RData.Rdata.resturants[cellIndex].name
-      address.text = RData.Rdata.resturants[cellIndex].address
-      rating.text = String(RData.Rdata.resturants[cellIndex].rating)
-      status.text = RData.Rdata.resturants[cellIndex].status
-      let t1 = RData.Rdata.resturants[cellIndex].timing[0]
-        _ = RData.Rdata.resturants[cellIndex].timing[1]
-      timing.text = "\(t1) - \(t1)"
-      menu.text = "To be displayed"
-      
+        image.image = RData.Rdata.resturants[cellIndex].resturantImage
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,14 +54,54 @@ class ResturantDetialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK:- Actions
+}
+
+
+
+//MARK:- Extension-> UItableViewContoller
+extension ResturantDetialViewController : UITableViewDelegate, UITableViewDataSource{
+  
     
-    @IBAction func callResturant(_ sender: Any) {
-        
-        let url :NSURL = NSURL(string: "tel://\(RData.Rdata.resturants[cellIndex].phoneNumber)")!
-        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-        
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        //set info cell
+        if indexPath.row == 0{
+            let cell = Bundle.main.loadNibNamed("InfoTableViewCell", owner: self, options: nil)?.first as! InfoTableViewCell
+            
+            cell.nameLabel.text = RData.Rdata.resturants[cellIndex].name
+            cell.addressLabel.text = RData.Rdata.resturants[cellIndex].address
+            cell.statusLabel.text = RData.Rdata.resturants[cellIndex].status
+            cell.timingsLabel.text = RData.Rdata.resturants[cellIndex].timing[cellIndex]
+            return cell
+            
+        }
+        //set actions cell
+        else if indexPath.row == 1{
+            let cell = Bundle.main.loadNibNamed("ActionsTableViewCell", owner: self, options: nil)?.first as! ActionsTableViewCell
+            return cell
+        
+        }
+        else if indexPath.row == 2{
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: restuarntDetailCells.amenitiesCell)
+            return cell!
+        }else{
+        fatalError("no cell exists in ResturantDetailViewconteller")
+        }
+        
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0{
+            return CGFloat(100.0)
+        }
+        return CGFloat(44)
+    }
+
+
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
-    var options = ["settings","Add Resturant","App Website"]
+    var options = ["settings","Add Resturant"]
     
     //MARK:- UIViewController
     override func viewDidLoad() {
@@ -41,22 +41,15 @@ class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDel
             
         }else if indexPath.row == 1{
             performSegue(withIdentifier: "AddResturant", sender: nil)
-        }else if indexPath.row == 2{
-           openWebsite()
+        }else{
+            fatalError("No such cell exists")
         }
         
         
         
     }
     
-    //MARK:- Private Functions
-    private func openWebsite(){
-        
-        let url: URL = URL(string: "http://yemekye-com.stackstaging.com/wordpress/")!
-//        UIApplication.shared.openURL(URL(string: "http://yemekye-com.stackstaging.com/wordpress/")!)
-        
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-    }
+
     
     //MARK:-Actions
     @IBAction func logOut(_ sender: UIBarButtonItem) {
