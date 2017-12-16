@@ -3,4 +3,5 @@ target 'yemekye' do
   #pod 'FacebookCore'
   #pod 'FacebookLogin'
    pod 'Firebase'
+   pod 'Firebase/Auth'
 end

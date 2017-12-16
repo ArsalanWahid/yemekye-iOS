@@ -8,17 +8,14 @@
 
 import UIKit
 import os.log
+import Firebase
+import FirebaseAuth
 class RegisterViewController: UIViewController ,UITextFieldDelegate{
     
     //MARK:- Properties
     var user:User?
     
-    
-    
-    
-    
     //MARK:- OUTLETS
-    
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -45,6 +42,28 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
     
     @IBAction func singUpUser(_ sender: UIButton) {
        //call firebase here for authentication
+        guard let username = nameTextField.text,
+        username != "",
+        let email  = emailTextField.text,
+        email != "",
+        let password = passwordTextField.text,
+        password != ""
+            else{
+                AlertController.showAlert(self, title: "Missing Info ", message: "Please fill all the fields")
+                return
+                
+        }
+        
+        
+        Auth.auth().createUser(withEmail: email, password: password) { user , error in
+            if error == nil && user != nil {
+                print("user created")
+            }else{
+                print("Could not create user")
+            }
+            
+        }
+        
     }
     
     

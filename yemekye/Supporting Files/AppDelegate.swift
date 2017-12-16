@@ -15,7 +15,7 @@
 //
 
 import UIKit
-import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //added these 3 methods
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        //use firebase library to configure APIs
+        FirebaseApp.configure()
         return true
     }
     
