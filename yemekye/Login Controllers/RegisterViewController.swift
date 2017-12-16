@@ -43,6 +43,9 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func singUpUser(_ sender: UIButton) {
+       //call firebase here for authentication
+    }
     
     
     //MARK:- UIViewController

@@ -16,8 +16,8 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
     
     //MARK:- Properties
     var users = [User]()
-    var uemail:String = ""
-    var upassword:String = ""
+    var uemail:String?
+    var upassword:String?
     
     //MARK:- Outlets
     @IBOutlet weak var signInEmail: UITextField!
@@ -26,27 +26,27 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
     //MARK:- Actions
     // if user name password matches then user is loggedin
     @IBAction func signInUser(_ sender: UIButton) {
-        if let email = signInEmail.text{
-            let temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
-            uemail = temp
-        }else{
-            print("Nothing entered")
-        }
-        if let password = signInPassword.text{
-            let temp = password.trimmingCharacters(in: .whitespacesAndNewlines)
-            upassword = temp
-        }else{
-            print("empty")
-        }
-        
-        if useremail == uemail && userpasword == upassword{
-            LoginManager.LoginStatus.isLoggedIn = true
-            print("user credentials match")
-            self.dismiss(animated: true, completion: nil)
-        }else{
-            print("User credentials dont match")
-        }
-        
+//        if let email = signInEmail.text{
+//            let temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
+//            uemail = temp
+//        }else{
+//            print("Nothing entered")
+//        }
+//        if let password = signInPassword.text{
+//            let temp = password.trimmingCharacters(in: .whitespacesAndNewlines)
+//            upassword = temp
+//        }else{
+//            print("empty")
+//        }
+//
+//        if useremail == uemail && userpasword == upassword{
+//            LoginManager.LoginStatus.isLoggedIn = true
+//            print("user credentials match")
+//            self.dismiss(animated: true, completion: nil)
+//        }else{
+//            print("User credentials dont match")
+//        }
+
         //Will go back to loginmaster
         self.dismiss(animated: true, completion: nil)
     }
@@ -89,6 +89,14 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
         signInEmail.resignFirstResponder()
         signInPassword.resignFirstResponder()
         return true
+    }
+    
+    
+    //MARK:- Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        uemail = "arsalanwahid"
+        upassword = "arsalanwahid"
     }
 
 }
