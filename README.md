@@ -19,9 +19,11 @@ The current project uses:
 - FaceBook Login
 - Local Data (Work in prgress to move to backend)
 
-The project is by no means complete and will continue to develop as I learn new skills and add more features.
 
-If you find bugs in this project (Which you will as any project :wink:) Please let me know or use the oppurtunity to learn frmo it and fix it and make a pull request.
+
+If you find bugs in this project (Which you will as any project :wink:) Please let me know or use the oppurtunity to learn from it and fix it and make a pull request.
+
+*The project is by no means complete and will continue to develop as I learn new skills and add more features.*
 
 Finally have Fun with the project and fixing it.... #development is hard thats why you should practise it.
 
