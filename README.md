@@ -36,6 +36,7 @@ Finally have Fun with the project and fixing it.... #development is hard thats w
    pod 'FacebookCore'
    pod 'FacebookLogin'
    pod 'FacebookShare'
+   pod 'IQKeyboardManager'
 ```
 
 
