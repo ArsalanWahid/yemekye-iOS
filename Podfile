@@ -5,4 +5,5 @@ target 'yemekye' do
    pod 'FacebookCore'
    pod 'FacebookLogin'
    pod 'FacebookShare'
+   pod 'IQKeyboardManager'
 end

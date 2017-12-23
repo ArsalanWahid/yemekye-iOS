@@ -18,7 +18,7 @@ import UIKit
 import Firebase
 import FacebookLogin
 import FacebookCore
-
+import IQKeyboardManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Setting up faceBook login
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        //Support For keyboard Management
+        IQKeyboardManager.shared().isEnabled = true
+        
         return true
     }
     
