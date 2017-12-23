@@ -41,11 +41,11 @@ class RData{
         
         let KFC = Resturant(name: "Kfc", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 5)
         
-        let KFC1 = Resturant(name: "McDonalds", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: macdonalslogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 4)
+        let KFC1 = Resturant(name: "McDonalds", menu: kfcMenu, timings: ["6am","9pm"], resturantImage: macdonalslogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 4)
         
-        let KFC2 = Resturant(name: "Dominos", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113", rating: 4)
+        let KFC2 = Resturant(name: "Dominos", menu: kfcMenu, timings: ["1am","3pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113", rating: 4)
         
-        let KFC3 = Resturant(name: "Subway", menu: kfcMenu, timings: ["11am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 3)
+        let KFC3 = Resturant(name: "Subway", menu: kfcMenu, timings: ["12am","11pm"], resturantImage: kfclogo!, status: "open", address: "karachi Pakistan", phonenumber: "0511555113",rating: 3)
         
         let karachi = City(name: "karachi", resturants: [KFC!])
         

@@ -7,17 +7,11 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 
 
 
 class SignInViewController: UIViewController ,UITextFieldDelegate{
-    
-    
-    //MARK:- Properties
-    var users = [User]()
-    var uemail:String?
-    var upassword:String?
     
     //MARK:- Outlets
     @IBOutlet weak var signInEmail: UITextField!
@@ -26,41 +20,29 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
     //MARK:- Actions
     // if user name password matches then user is loggedin
     @IBAction func signInUser(_ sender: UIButton) {
-//        if let email = signInEmail.text{
-//            let temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
-//            uemail = temp
-//        }else{
-//            print("Nothing entered")
-//        }
-//        if let password = signInPassword.text{
-//            let temp = password.trimmingCharacters(in: .whitespacesAndNewlines)
-//            upassword = temp
-//        }else{
-//            print("empty")
-//        }
-//
-//        if useremail == uemail && userpasword == upassword{
-//            LoginManager.LoginStatus.isLoggedIn = true
-//            print("user credentials match")
-//            self.dismiss(animated: true, completion: nil)
-//        }else{
-//            print("User credentials dont match")
-//        }
-
-        //Will go back to loginmaster
-        self.dismiss(animated: true, completion: nil)
+     
+        var a = signInEmail.text
+        a = a?.trimmingCharacters(in: .whitespaces)
+        print(a)
+        var b = signInPassword.text
+        b = b?.trimmingCharacters(in: .whitespaces)
+        print(b)
+        
+        Auth.auth().signIn(withEmail: a!, password: b!){user ,error in
+            if error == nil && user != nil{
+                print("User was successfully logged in")
+                
+                
+                self.dismiss(animated: false, completion: nil)
+            }else{
+                print("User could not be loaded")
+            }
+        }
     }
     
     @IBAction func cancelSignIn(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    //MARK:- NSUserDefaults
-    //Store values saved in userdefaults
-    private var username = UserDefaults.standard.object(forKey: "name") as? String
-    private var useremail = UserDefaults.standard.object(forKey: "email") as? String
-    private var userpasword = UserDefaults.standard.object(forKey: "password") as? String
     
     
     //MARK:- UIViewController
@@ -95,8 +77,6 @@ class SignInViewController: UIViewController ,UITextFieldDelegate{
     //MARK:- Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        uemail = "arsalanwahid"
-        upassword = "arsalanwahid"
     }
 
 }

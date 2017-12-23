@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import Foundation
+
+/*
+ Implementing the foundation class URL load system here in this class
+ */
+
 
 class PromotionsViewController: UIViewController {
 
+    //MARK:- Outlets
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var data: UILabel!
+    
+    //MARK:- Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        loadFromNetwork()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +32,32 @@ class PromotionsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //Private Functions
+    
+    
+    //By Default this code executes in the background
+    func loadFromNetwork() {
+        
+        let url = URL(string: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg")!
+        
+        let task = URLSession.shared.dataTask(with: url){
+            data , response, error in
+            
+            if error == nil{
+                let downloadedImage = UIImage(data: data!)
+                DispatchQueue.main.async {
+                    self.image.image = downloadedImage
+                    self.data.text = "\(data?.count)"
+                }
+                
+            
+                
+            }
+           
+        }
+            //will start the network task
+            task.resume()
     }
-    */
 
 }

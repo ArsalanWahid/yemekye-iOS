@@ -16,6 +16,9 @@
 
 import UIKit
 import Firebase
+import FacebookLogin
+import FacebookCore
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,7 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //use firebase library to configure APIs
         FirebaseApp.configure()
+        
+        //Setting up faceBook login
+        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
     }
     
 //    func applicationWillResignActive(_ application: UIApplication) {

@@ -9,14 +9,14 @@
 import UIKit
 
 class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
-
+    
     var options = ["settings","Add Resturant"]
     
     //MARK:- UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = .red
-
+        
         
     }
     
@@ -45,20 +45,10 @@ class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDel
             fatalError("No such cell exists")
         }
         
-        
-        
     }
     
+}
 
-    
-    //MARK:-Actions
-    @IBAction func logOut(_ sender: UIBarButtonItem) {
-        LoginManager.LoginStatus.isLoggedIn = false
-            performSegue(withIdentifier: "loginScreen", sender: nil)
-        }
-    
-    }
-    
 
 
 

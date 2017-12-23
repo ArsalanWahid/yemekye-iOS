@@ -67,7 +67,7 @@ extension ResturantDetialViewController : UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        var temp:String = String()
         //set info cell
         if indexPath.row == 0{
             let cell = Bundle.main.loadNibNamed("InfoTableViewCell", owner: self, options: nil)?.first as! InfoTableViewCell
@@ -75,7 +75,13 @@ extension ResturantDetialViewController : UITableViewDelegate, UITableViewDataSo
             cell.nameLabel.text = RData.Rdata.resturants[cellIndex].name
             cell.addressLabel.text = RData.Rdata.resturants[cellIndex].address
             cell.statusLabel.text = RData.Rdata.resturants[cellIndex].status
-            cell.timingsLabel.text = RData.Rdata.resturants[cellIndex].timing[cellIndex]
+            for n in RData.Rdata.resturants[cellIndex].timing{
+                
+                temp.append(" \(n)")
+            print(temp)
+            }
+            cell.timingsLabel.text = temp
+            
             return cell
             
         }
@@ -103,5 +109,7 @@ extension ResturantDetialViewController : UITableViewDelegate, UITableViewDataSo
         return CGFloat(44)
     }
 
+    
+    
 
 }

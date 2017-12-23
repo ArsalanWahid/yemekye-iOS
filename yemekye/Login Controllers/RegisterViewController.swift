@@ -41,13 +41,13 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
     }
     
     @IBAction func singUpUser(_ sender: UIButton) {
-       //call firebase here for authentication
+        //call firebase here for authentication
         guard let username = nameTextField.text,
-        username != "",
-        let email  = emailTextField.text,
-        email != "",
-        let password = passwordTextField.text,
-        password != ""
+            username != "",
+            let email  = emailTextField.text,
+            email != "",
+            let password = passwordTextField.text,
+            password != ""
             else{
                 AlertController.showAlert(self, title: "Missing Info ", message: "Please fill all the fields")
                 return
@@ -58,12 +58,21 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
         Auth.auth().createUser(withEmail: email, password: password) { user , error in
             if error == nil && user != nil {
                 print("user created")
+                
+                let chageRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                chageRequest?.displayName = username
+                chageRequest?.commitChanges{ error in
+                    if error == nil{
+                        print("User diaply name changed")
+                    }
+                    
+                }
             }else{
-                print("Could not create user")
+                print("Could not create user due to  \(error)")
             }
             
         }
-        
+    
     }
     
     
@@ -112,38 +121,7 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
         user = User(name: userName, email: userEmail, password: userPassword, role: .customer)
     }
     
-        //MARK:- Actions
-    
-    
-    //This should either goto API or core data
-//        @IBAction func SignUpUser(_ sender: UIButton) {
-//            //VALIDATE FIELDS ARE NOT EMPTY
-//            if let name  = name.text{
-//                var temp = name.trimmingCharacters(in: .whitespacesAndNewlines)
-//                UserDefaults.standard.set(temp, forKey: "name")
-//            }else{
-//                print("value empty")
-//            }
-//    
-//            if let email = email.text{
-//                var temp = email.trimmingCharacters(in: .whitespacesAndNewlines)
-//                UserDefaults.standard.set(temp, forKey: "email")
-//            }else{
-//                print("empty")
-//            }
-//    
-//            if let password = password.text{
-//                var temp = password.trimmingCharacters(in: .whitespacesAndNewlines)
-//                UserDefaults.standard.set(temp, forKey: "password")
-//            }else{
-//                print("Error in password")
-//            }
-//            UserDefaults.standard.synchronize() //Hard flush to disk
-//    
-//            self.dismiss(animated: true, completion: nil)
-//            //DISMISS VIEW AND SHOW LOGIN PAGE
-//        }
-    
+    //MARK:- Actions
     
     
     //MARL:- Private Functions
@@ -162,7 +140,7 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
     
     
     
-  
+    
 }
 
 

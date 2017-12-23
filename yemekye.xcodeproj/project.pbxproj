@@ -19,6 +19,7 @@
 		D725B6FA1FE54D86006B802B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D725B6F91FE54D85006B802B /* GoogleService-Info.plist */; };
 		D725B6FD1FE56881006B802B /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D725B6FC1FE56881006B802B /* AlertController.swift */; };
 		D726AD691F9CCBFE00C37CFA /* ResturantDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */; };
+		D735DE611FEE8E380036AFF3 /* BlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735DE601FEE8E380036AFF3 /* BlackBox.swift */; };
 		D740F32E1FE2C20300D564D1 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D740F32C1FE2C20300D564D1 /* InfoTableViewCell.swift */; };
 		D740F32F1FE2C20300D564D1 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D740F32D1FE2C20300D564D1 /* InfoTableViewCell.xib */; };
 		D742F6781FDC12D50007A970 /* PromotionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742F6761FDC12D50007A970 /* PromotionsTableViewCell.swift */; };
@@ -30,6 +31,7 @@
 		D75F12E01FD801CA00AE58CC /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75F12DF1FD801CA00AE58CC /* data.swift */; };
 		D762275D1FA8C10B007B82E7 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */; };
 		D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */; };
+		D77BCA821FEC1D0E00147449 /* developerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77BCA811FEC1D0E00147449 /* developerViewController.swift */; };
 		D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */; };
 		D793A6701FB360C300D9BF32 /* promotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793A66F1FB360C300D9BF32 /* promotions.swift */; };
 		D7AF08A41FDAE7190095E58B /* ResturantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF08A31FDAE7190095E58B /* ResturantsTableViewCell.swift */; };
@@ -60,6 +62,7 @@
 		D725B6F91FE54D85006B802B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D725B6FC1FE56881006B802B /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetialViewController.swift; sourceTree = "<group>"; };
+		D735DE601FEE8E380036AFF3 /* BlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBox.swift; sourceTree = "<group>"; };
 		D740F32C1FE2C20300D564D1 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		D740F32D1FE2C20300D564D1 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
 		D742F6761FDC12D50007A970 /* PromotionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsTableViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		D75F12DF1FD801CA00AE58CC /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D77BCA811FEC1D0E00147449 /* developerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = developerViewController.swift; sourceTree = "<group>"; };
 		D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D793A66F1FB360C300D9BF32 /* promotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promotions.swift; sourceTree = "<group>"; };
 		D7AF08A31FDAE7190095E58B /* ResturantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsTableViewCell.swift; sourceTree = "<group>"; };
@@ -139,6 +143,14 @@
 			path = "Resturant Cells";
 			sourceTree = "<group>";
 		};
+		D735DE5F1FEE8E250036AFF3 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D735DE601FEE8E380036AFF3 /* BlackBox.swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
 		D742F67A1FDC12E30007A970 /* PromotionsCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +174,7 @@
 		D74FE3DA1FA33FA500B533AB /* App Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D77BCA811FEC1D0E00147449 /* developerViewController.swift */,
 				D7F124B51F9C9796000491D4 /* mainViewController.swift */,
 				D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */,
 				D793A66F1FB360C300D9BF32 /* promotions.swift */,
@@ -235,6 +248,7 @@
 		D7F124A21F9C8F50000491D4 /* yemekye */ = {
 			isa = PBXGroup;
 			children = (
+				D735DE5F1FEE8E250036AFF3 /* Network Layer */,
 				D7F124AF1F9C8F50000491D4 /* Info.plist */,
 				D725B6F91FE54D85006B802B /* GoogleService-Info.plist */,
 				D74FE3DB1FA33FB400B533AB /* Interfaces */,
@@ -367,12 +381,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-yemekye/Pods-yemekye-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -407,9 +435,11 @@
 				D7AF08A61FDAE7C90095E58B /* ResturantsCollectionViewCell.swift in Sources */,
 				D724394D1FD6AAC500BB5A40 /* Country.swift in Sources */,
 				D7B78C881FD57A9300A9CEC8 /* MoreViewController.swift in Sources */,
+				D735DE611FEE8E380036AFF3 /* BlackBox.swift in Sources */,
 				D72439471FD6A70D00BB5A40 /* Menu.swift in Sources */,
 				D725B6FD1FE56881006B802B /* AlertController.swift in Sources */,
 				D742F67C1FDC194F0007A970 /* PromotionsViewController.swift in Sources */,
+				D77BCA821FEC1D0E00147449 /* developerViewController.swift in Sources */,
 				D742F6821FDC22D10007A970 /* resturantData.swift in Sources */,
 				D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */,
 				D7C9CA981FAC90A5006A2026 /* LoginManager.swift in Sources */,
@@ -554,13 +584,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 44R9FC56QP;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = yemekye/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asghars.yemekye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -574,13 +606,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 44R9FC56QP;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = yemekye/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asghars.yemekye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

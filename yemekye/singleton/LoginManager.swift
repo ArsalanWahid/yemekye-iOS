@@ -13,9 +13,6 @@ class LoginManager{
     
     
     var isLoggedIn = false
-    var currentUserEmail :String = ""
-    var currentUserPassword: String = ""
-
     static let LoginStatus = LoginManager()
     
 }
