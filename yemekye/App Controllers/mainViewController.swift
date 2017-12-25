@@ -30,16 +30,22 @@ import FirebaseAuth
  
  */
 
-
 var cellIndex = 0
-//VIEW CONTROLLER CODE STARTS HERE
+
 class mainViewController: UIViewController , UITableViewDelegate,UITableViewDataSource{
     
+    
+    
+    
+    //MARK:- Cell Identifiers
     struct StoryBoard{
         static let resturantCell = "resturantCell"
         static let promotionsCell = "promotionscCell"
         static let developerCell = "developerCell"
         static let welcomeCell = "welcomeCell"
+        static let resturantDetail = "resturantDetail"
+        static let loginScreenFromResturant = "loginScreenFromResturant"
+        static let showPromotions = "showPromotions"
     }
     
     //MARK:- UIViewController
@@ -50,14 +56,25 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         if  Auth.auth().currentUser != nil || LoginManager.LoginStatus.isLoggedIn{
-                print("user is loggd in ")
-            }else{
-                performSegue(withIdentifier: "loginScreenFromResturant", sender: nil)
+            print("user is loggd in ")
+        }else{
+            performSegue(withIdentifier: StoryBoard.loginScreenFromResturant, sender: nil)
         }
     }
-
-}
     
+    
+    
+    //MARK:- Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == StoryBoard.resturantDetail{
+            let detailTVC = segue.destination as! ResturantDetialViewController
+            let image = RData.Rdata.resturants[cellIndex].resturantImage
+            detailTVC.image = image
+        }
+    }
+}
+
 //MARK:- Table DataSources
 extension mainViewController{
     
@@ -69,7 +86,7 @@ extension mainViewController{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         /*Use when loading from custom xib file*/
-    
+        
         if indexPath.row == 0 {
             let cell  = tableView.dequeueReusableCell(withIdentifier: StoryBoard.welcomeCell,for: indexPath) as! WelcomeTableViewCell
             cell.welcomeLabel.text = "Welcome to Yemek Ye !"
@@ -88,6 +105,7 @@ extension mainViewController{
             
             cell.promotionsLabel.text = "Promotions"
             cell.accessoryType = .disclosureIndicator
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         }
         
@@ -97,6 +115,7 @@ extension mainViewController{
             cell.promotionsLabel.text = "Developers"
             cell.promotionsImage.image = UIImage(named: "laptop.png")
             cell.accessoryType = .disclosureIndicator
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         }
         
@@ -139,7 +158,7 @@ extension mainViewController{
         }
         
         if indexPath.row == 2{
-            performSegue(withIdentifier: "showPromotions", sender: nil)
+            performSegue(withIdentifier: StoryBoard.showPromotions, sender: nil)
         }
         
         if indexPath.row == 3 {
@@ -147,10 +166,6 @@ extension mainViewController{
         }
     }
     
-    //Set the view for the footer in tableview
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return nil
-    }
     
 }
 
@@ -163,7 +178,7 @@ extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate
     }
     
     
-    
+    //This will fill the collection view
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryBoard.resturantCell, for: indexPath) as! ResturantsCollectionViewCell
         
@@ -175,11 +190,12 @@ extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate
         
     }
     
-    
+    //This will perform logic for when item from collection  view is selected
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         cellIndex = indexPath.row
-        print("Item selected from the main controller is \(cellIndex)")
-        performSegue(withIdentifier: "resturantDetail", sender: nil)
+        print("User has selected \(cellIndex) from collection View on main app controller")
+        let image: UIImage =  RData.Rdata.resturants[cellIndex].resturantImage
+        performSegue(withIdentifier: StoryBoard.resturantDetail, sender: image)
     }
     
 }

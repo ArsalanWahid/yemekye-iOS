@@ -58,6 +58,9 @@ class SettingViewController: UIViewController ,UITableViewDelegate,UITableViewDa
             }
     }
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
+    }
     
     /*
      // MARK: - Navigation

@@ -12,6 +12,12 @@ class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDel
     
     var options = ["settings","Add Resturant"]
     
+    
+    //MARK:- Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     //MARK:- UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +53,14 @@ class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDel
         
     }
     
+    
+    //MARK:- UITableViewDelegate
+  
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return tableView.frame.height - 88
+    }
+   
 }
 
 
