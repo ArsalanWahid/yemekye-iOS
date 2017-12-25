@@ -20,6 +20,10 @@
 		D725B6FD1FE56881006B802B /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D725B6FC1FE56881006B802B /* AlertController.swift */; };
 		D726AD691F9CCBFE00C37CFA /* ResturantDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */; };
 		D735DE611FEE8E380036AFF3 /* BlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735DE601FEE8E380036AFF3 /* BlackBox.swift */; };
+		D735DE651FEF2E4D0036AFF3 /* ResturantHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735DE641FEF2E4D0036AFF3 /* ResturantHeaderView.swift */; };
+		D735DE6A1FF116B00036AFF3 /* AmenitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735DE681FF116B00036AFF3 /* AmenitiesTableViewCell.swift */; };
+		D735DE6B1FF116B00036AFF3 /* AmenitiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D735DE691FF116B00036AFF3 /* AmenitiesTableViewCell.xib */; };
+		D735DE6F1FF199F20036AFF3 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735DE6E1FF199F20036AFF3 /* MenuTableViewController.swift */; };
 		D740F32E1FE2C20300D564D1 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D740F32C1FE2C20300D564D1 /* InfoTableViewCell.swift */; };
 		D740F32F1FE2C20300D564D1 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D740F32D1FE2C20300D564D1 /* InfoTableViewCell.xib */; };
 		D742F6781FDC12D50007A970 /* PromotionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742F6761FDC12D50007A970 /* PromotionsTableViewCell.swift */; };
@@ -32,8 +36,8 @@
 		D762275D1FA8C10B007B82E7 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */; };
 		D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */; };
 		D77BCA821FEC1D0E00147449 /* developerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77BCA811FEC1D0E00147449 /* developerViewController.swift */; };
+		D78810E91FF1A20B008BF5C3 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78810E81FF1A20B008BF5C3 /* MealTableViewCell.swift */; };
 		D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */; };
-		D793A6701FB360C300D9BF32 /* promotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793A66F1FB360C300D9BF32 /* promotions.swift */; };
 		D7AF08A41FDAE7190095E58B /* ResturantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF08A31FDAE7190095E58B /* ResturantsTableViewCell.swift */; };
 		D7AF08A61FDAE7C90095E58B /* ResturantsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF08A51FDAE7C90095E58B /* ResturantsCollectionViewCell.swift */; };
 		D7B78C881FD57A9300A9CEC8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */; };
@@ -63,6 +67,10 @@
 		D725B6FC1FE56881006B802B /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetialViewController.swift; sourceTree = "<group>"; };
 		D735DE601FEE8E380036AFF3 /* BlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBox.swift; sourceTree = "<group>"; };
+		D735DE641FEF2E4D0036AFF3 /* ResturantHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantHeaderView.swift; sourceTree = "<group>"; };
+		D735DE681FF116B00036AFF3 /* AmenitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenitiesTableViewCell.swift; sourceTree = "<group>"; };
+		D735DE691FF116B00036AFF3 /* AmenitiesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmenitiesTableViewCell.xib; sourceTree = "<group>"; };
+		D735DE6E1FF199F20036AFF3 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		D740F32C1FE2C20300D564D1 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		D740F32D1FE2C20300D564D1 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
 		D742F6761FDC12D50007A970 /* PromotionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,8 +83,8 @@
 		D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D77BCA811FEC1D0E00147449 /* developerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = developerViewController.swift; sourceTree = "<group>"; };
+		D78810E81FF1A20B008BF5C3 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		D793A66F1FB360C300D9BF32 /* promotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promotions.swift; sourceTree = "<group>"; };
 		D7AF08A31FDAE7190095E58B /* ResturantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsTableViewCell.swift; sourceTree = "<group>"; };
 		D7AF08A51FDAE7C90095E58B /* ResturantsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +147,10 @@
 				D740F32D1FE2C20300D564D1 /* InfoTableViewCell.xib */,
 				D725B6F51FE421BD006B802B /* ActionsTableViewCell.swift */,
 				D725B6F61FE421BD006B802B /* ActionsTableViewCell.xib */,
+				D735DE641FEF2E4D0036AFF3 /* ResturantHeaderView.swift */,
+				D735DE681FF116B00036AFF3 /* AmenitiesTableViewCell.swift */,
+				D735DE691FF116B00036AFF3 /* AmenitiesTableViewCell.xib */,
+				D78810E81FF1A20B008BF5C3 /* MealTableViewCell.swift */,
 			);
 			path = "Resturant Cells";
 			sourceTree = "<group>";
@@ -177,9 +189,9 @@
 				D77BCA811FEC1D0E00147449 /* developerViewController.swift */,
 				D7F124B51F9C9796000491D4 /* mainViewController.swift */,
 				D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */,
-				D793A66F1FB360C300D9BF32 /* promotions.swift */,
-				D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */,
+				D735DE6E1FF199F20036AFF3 /* MenuTableViewController.swift */,
 				D7109E841FD5C3150019E779 /* SettingViewController.swift */,
+				D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */,
 				D742F67B1FDC194F0007A970 /* PromotionsViewController.swift */,
 				D725B6FC1FE56881006B802B /* AlertController.swift */,
 			);
@@ -328,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D742F6801FDC1D600007A970 /* WelcomeTableViewCell.xib in Resources */,
+				D735DE6B1FF116B00036AFF3 /* AmenitiesTableViewCell.xib in Resources */,
 				D7F124AE1F9C8F50000491D4 /* LaunchScreen.storyboard in Resources */,
 				D7F124AB1F9C8F50000491D4 /* Assets.xcassets in Resources */,
 				D725B6F81FE421BD006B802B /* ActionsTableViewCell.xib in Resources */,
@@ -435,9 +448,13 @@
 				D7109E851FD5C3150019E779 /* SettingViewController.swift in Sources */,
 				D72439411FD6A52600BB5A40 /* User.swift in Sources */,
 				D7AF08A61FDAE7C90095E58B /* ResturantsCollectionViewCell.swift in Sources */,
+				D735DE651FEF2E4D0036AFF3 /* ResturantHeaderView.swift in Sources */,
 				D724394D1FD6AAC500BB5A40 /* Country.swift in Sources */,
 				D7B78C881FD57A9300A9CEC8 /* MoreViewController.swift in Sources */,
 				D735DE611FEE8E380036AFF3 /* BlackBox.swift in Sources */,
+				D78810E91FF1A20B008BF5C3 /* MealTableViewCell.swift in Sources */,
+				D735DE6F1FF199F20036AFF3 /* MenuTableViewController.swift in Sources */,
+				D735DE6A1FF116B00036AFF3 /* AmenitiesTableViewCell.swift in Sources */,
 				D72439471FD6A70D00BB5A40 /* Menu.swift in Sources */,
 				D725B6FD1FE56881006B802B /* AlertController.swift in Sources */,
 				D742F67C1FDC194F0007A970 /* PromotionsViewController.swift in Sources */,
@@ -446,7 +463,6 @@
 				D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */,
 				D7C9CA981FAC90A5006A2026 /* LoginManager.swift in Sources */,
 				D762275D1FA8C10B007B82E7 /* ResetPasswordViewController.swift in Sources */,
-				D793A6701FB360C300D9BF32 /* promotions.swift in Sources */,
 				D7F124B61F9C9796000491D4 /* mainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,9 +604,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W2ZMAPYRZ7;
 				INFOPLIST_FILE = yemekye/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asghars.yemekye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -610,9 +626,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W2ZMAPYRZ7;
 				INFOPLIST_FILE = yemekye/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asghars.yemekye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
