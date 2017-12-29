@@ -21,8 +21,9 @@ class User{
     let email: String
     var password :String
     var role :Role
+    var imageURL: String
     
-    init?(name:String, email:String, password:String, role:Role) {
+    init?(name:String, email:String, password:String, role:Role,imageUrl: String) {
         
         guard !name.isEmpty else {
             return nil
@@ -40,6 +41,7 @@ class User{
         self.email = email
         self.password = password
         self.role = role
+        self.imageURL = imageUrl
     }
     
 }

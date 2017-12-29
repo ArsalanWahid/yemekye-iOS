@@ -76,6 +76,10 @@ class ResturantDetialViewController: UITableViewController{
         tableView.contentOffset = CGPoint(x: 0, y: -effectiveHeight)
         updateheaderView()
         
+        //MARK:- NavigationBar
+
+        self.navigationItem.title = RData.Rdata.resturants[cellIndex].name
+        
         
     }
     
@@ -192,6 +196,7 @@ extension ResturantDetialViewController{
     
 }
 
+//MARK:- Update Streachy Header
 extension ResturantDetialViewController{
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateheaderView()

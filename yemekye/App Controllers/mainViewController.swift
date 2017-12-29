@@ -8,8 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-
-
+import FacebookCore
 /*
  TODO-LIST
  
@@ -19,7 +18,7 @@ import FirebaseAuth
  2. UICollectionView
  3. preloaded Data for resturant
  4. navigation
- 
+ 5. Facebook login
  Work flow form this Scene
  
  1. Fix tableView ,set constraints -> covers all screen
@@ -33,8 +32,7 @@ import FirebaseAuth
 var cellIndex = 0
 
 class mainViewController: UIViewController , UITableViewDelegate,UITableViewDataSource{
-    
-    
+   
     
     
     //MARK:- Cell Identifiers
@@ -48,11 +46,68 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
         static let showPromotions = "showPromotions"
     }
     
-    //MARK:- UIViewController
+    //MARK:- Life Cycle ---to be done later
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = .red
+        fetchProfile()
+        setNavbar()
+        
     }
+    
+    
+    
+    
+    //MARK:- Private function
+    private func setNavbar(){
+        let middleItem = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
+        middleItem.backgroundColor = UIColor.clear
+        let searchButton  = UIButton(type: .custom)
+        searchButton.frame = CGRect(x: 0, y: 0, width: 200, height: 44)
+        searchButton.setTitle("Search ^", for: .normal)
+        searchButton.backgroundColor = UIColor.darkGray
+        searchButton.addTarget(self, action: #selector(searchView), for: UIControlEvents.touchUpInside)
+        middleItem.addSubview(searchButton)
+        self.navigationItem.titleView = middleItem
+    }
+    
+    @objc private func searchView(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        self.present(secondViewController, animated: true, completion: nil)
+    }
+    
+    //############NO IDEA HOW THIS WORKS#######################
+    func fetchProfile(){
+        
+        struct MyProfileRequest: GraphRequestProtocol {
+            struct Response: GraphResponseProtocol {
+                init(rawResponse: Any?) {
+                    // Decode JSON from rawResponse into other properties here.
+                }
+            }
+            
+            var graphPath = "/me"
+            var parameters: [String : Any]? = ["fields": "id,email, name"]
+            var accessToken = AccessToken.current
+            var httpMethod: GraphRequestHTTPMethod = .GET
+            var apiVersion: GraphAPIVersion = .defaultVersion
+        }
+        
+        
+        let connection = GraphRequestConnection()
+        connection.add(MyProfileRequest()) { response, result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failed(let error):
+                print("Custom Graph Request Failed: \(error)")
+            }
+        }
+        connection.start()
+    }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         if  Auth.auth().currentUser != nil || LoginManager.LoginStatus.isLoggedIn{
@@ -118,6 +173,8 @@ extension mainViewController{
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         }
+        
+        
         
         
         return UITableViewCell()

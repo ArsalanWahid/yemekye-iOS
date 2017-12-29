@@ -71,14 +71,12 @@ class LoginViewController: UIViewController,LoginButtonDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Add custom facebook UI from API
-        var loginButton = LoginButton(readPermissions: [ .publicProfile ])
+        //Add custom facebook UI button and read permission to access token for user data
+        var loginButton = LoginButton(readPermissions: [ .publicProfile])
         loginButton.center = view.center
         loginButton.frame = CGRect(x: 16, y: 437, width: 343, height: 40)
         view.addSubview(loginButton)
         loginButton.delegate = self as LoginButtonDelegate
-        
-        
        
     }
     

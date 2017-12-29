@@ -6,4 +6,5 @@ target 'yemekye' do
    pod 'FacebookLogin'
    pod 'FacebookShare'
    pod 'IQKeyboardManager'
+   pod 'AlamofireObjectMapper', '~> 5.0'
 end

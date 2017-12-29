@@ -49,7 +49,7 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
             let password = passwordTextField.text,
             password != ""
             else{
-                AlertController.showAlert(self, title: "Missing Info ", message: "Please fill all the fields")
+                
                 return
                 
         }
@@ -72,8 +72,13 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
             }
             
         }
-    
+        
     }
+    
+    @IBAction func policyAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "policy", sender: nil)
+    }
+    
     
     
     //MARK:- UIViewController
@@ -113,18 +118,15 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate{
     //MARK:- Naivgation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
+        if segue.identifier == "policy"{
+            let DVC = segue.destination as! policyViewController
+            DVC.url = URL(string: "https://www.google.com")
+        }
         
-        let userName  = nameTextField.text ?? ""
-        let userEmail = emailTextField.text ?? ""
-        let userPassword = passwordTextField.text ?? ""
-        
-        user = User(name: userName, email: userEmail, password: userPassword, role: .customer)
     }
-    
-    //MARK:- Actions
-    
-    
-    //MARL:- Private Functions
+
+
+    //MARK:- Private Functions
     
     //CUSTOMZIE BUTTONS CODE IN THE REGISTER USER VIEW
     private func buttonUnderline(_ message: String, _ size: Int) -> NSAttributedString{

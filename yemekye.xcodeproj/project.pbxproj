@@ -17,7 +17,6 @@
 		D725B6F71FE421BD006B802B /* ActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D725B6F51FE421BD006B802B /* ActionsTableViewCell.swift */; };
 		D725B6F81FE421BD006B802B /* ActionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D725B6F61FE421BD006B802B /* ActionsTableViewCell.xib */; };
 		D725B6FA1FE54D86006B802B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D725B6F91FE54D85006B802B /* GoogleService-Info.plist */; };
-		D725B6FD1FE56881006B802B /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D725B6FC1FE56881006B802B /* AlertController.swift */; };
 		D726AD691F9CCBFE00C37CFA /* ResturantDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */; };
 		D735DE611FEE8E380036AFF3 /* BlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735DE601FEE8E380036AFF3 /* BlackBox.swift */; };
 		D735DE651FEF2E4D0036AFF3 /* ResturantHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735DE641FEF2E4D0036AFF3 /* ResturantHeaderView.swift */; };
@@ -37,11 +36,15 @@
 		D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */; };
 		D77BCA821FEC1D0E00147449 /* developerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77BCA811FEC1D0E00147449 /* developerViewController.swift */; };
 		D78810E91FF1A20B008BF5C3 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78810E81FF1A20B008BF5C3 /* MealTableViewCell.swift */; };
+		D78810EB1FF1AC68008BF5C3 /* policyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78810EA1FF1AC68008BF5C3 /* policyViewController.swift */; };
 		D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */; };
+		D7A805431FF57D6400A57529 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A805421FF57D6400A57529 /* SearchViewController.swift */; };
 		D7AF08A41FDAE7190095E58B /* ResturantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF08A31FDAE7190095E58B /* ResturantsTableViewCell.swift */; };
 		D7AF08A61FDAE7C90095E58B /* ResturantsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF08A51FDAE7C90095E58B /* ResturantsCollectionViewCell.swift */; };
 		D7B78C881FD57A9300A9CEC8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */; };
 		D7C9CA981FAC90A5006A2026 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9CA971FAC90A5006A2026 /* LoginManager.swift */; };
+		D7DF9C261FF51D7200F1324D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9C251FF51D7200F1324D /* Service.swift */; };
+		D7DF9C281FF522D300F1324D /* cityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9C271FF522D300F1324D /* cityResponse.swift */; };
 		D7F124A41F9C8F50000491D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F124A31F9C8F50000491D4 /* AppDelegate.swift */; };
 		D7F124A61F9C8F50000491D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F124A51F9C8F50000491D4 /* LoginViewController.swift */; };
 		D7F124A91F9C8F50000491D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F124A71F9C8F50000491D4 /* Main.storyboard */; };
@@ -64,7 +67,6 @@
 		D725B6F51FE421BD006B802B /* ActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsTableViewCell.swift; sourceTree = "<group>"; };
 		D725B6F61FE421BD006B802B /* ActionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionsTableViewCell.xib; sourceTree = "<group>"; };
 		D725B6F91FE54D85006B802B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D725B6FC1FE56881006B802B /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		D726AD681F9CCBFE00C37CFA /* ResturantDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetialViewController.swift; sourceTree = "<group>"; };
 		D735DE601FEE8E380036AFF3 /* BlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBox.swift; sourceTree = "<group>"; };
 		D735DE641FEF2E4D0036AFF3 /* ResturantHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantHeaderView.swift; sourceTree = "<group>"; };
@@ -84,11 +86,15 @@
 		D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D77BCA811FEC1D0E00147449 /* developerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = developerViewController.swift; sourceTree = "<group>"; };
 		D78810E81FF1A20B008BF5C3 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		D78810EA1FF1AC68008BF5C3 /* policyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policyViewController.swift; sourceTree = "<group>"; };
 		D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D7A805421FF57D6400A57529 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D7AF08A31FDAE7190095E58B /* ResturantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsTableViewCell.swift; sourceTree = "<group>"; };
 		D7AF08A51FDAE7C90095E58B /* ResturantsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		D7C9CA971FAC90A5006A2026 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		D7DF9C251FF51D7200F1324D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		D7DF9C271FF522D300F1324D /* cityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityResponse.swift; sourceTree = "<group>"; };
 		D7F124A01F9C8F50000491D4 /* yemekye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yemekye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F124A31F9C8F50000491D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7F124A51F9C8F50000491D4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				D735DE601FEE8E380036AFF3 /* BlackBox.swift */,
+				D7DF9C251FF51D7200F1324D /* Service.swift */,
+				D7DF9C271FF522D300F1324D /* cityResponse.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 				D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */,
 				D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */,
 				D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */,
+				D78810EA1FF1AC68008BF5C3 /* policyViewController.swift */,
 			);
 			path = "Login Controllers";
 			sourceTree = "<group>";
@@ -193,7 +202,7 @@
 				D7109E841FD5C3150019E779 /* SettingViewController.swift */,
 				D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */,
 				D742F67B1FDC194F0007A970 /* PromotionsViewController.swift */,
-				D725B6FC1FE56881006B802B /* AlertController.swift */,
+				D7A805421FF57D6400A57529 /* SearchViewController.swift */,
 			);
 			path = "App Controllers";
 			sourceTree = "<group>";
@@ -394,6 +403,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-yemekye/Pods-yemekye-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -404,10 +415,13 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -418,6 +432,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,9 +457,12 @@
 				D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */,
 				D7F124A41F9C8F50000491D4 /* AppDelegate.swift in Sources */,
 				D742F6781FDC12D50007A970 /* PromotionsTableViewCell.swift in Sources */,
+				D78810EB1FF1AC68008BF5C3 /* policyViewController.swift in Sources */,
+				D7DF9C261FF51D7200F1324D /* Service.swift in Sources */,
 				D740F32E1FE2C20300D564D1 /* InfoTableViewCell.swift in Sources */,
 				D725B6F71FE421BD006B802B /* ActionsTableViewCell.swift in Sources */,
 				D724394F1FD6AB0900BB5A40 /* Cities.swift in Sources */,
+				D7A805431FF57D6400A57529 /* SearchViewController.swift in Sources */,
 				D7109E851FD5C3150019E779 /* SettingViewController.swift in Sources */,
 				D72439411FD6A52600BB5A40 /* User.swift in Sources */,
 				D7AF08A61FDAE7C90095E58B /* ResturantsCollectionViewCell.swift in Sources */,
@@ -456,10 +474,10 @@
 				D735DE6F1FF199F20036AFF3 /* MenuTableViewController.swift in Sources */,
 				D735DE6A1FF116B00036AFF3 /* AmenitiesTableViewCell.swift in Sources */,
 				D72439471FD6A70D00BB5A40 /* Menu.swift in Sources */,
-				D725B6FD1FE56881006B802B /* AlertController.swift in Sources */,
 				D742F67C1FDC194F0007A970 /* PromotionsViewController.swift in Sources */,
 				D77BCA821FEC1D0E00147449 /* developerViewController.swift in Sources */,
 				D742F6821FDC22D10007A970 /* resturantData.swift in Sources */,
+				D7DF9C281FF522D300F1324D /* cityResponse.swift in Sources */,
 				D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */,
 				D7C9CA981FAC90A5006A2026 /* LoginManager.swift in Sources */,
 				D762275D1FA8C10B007B82E7 /* ResetPasswordViewController.swift in Sources */,
