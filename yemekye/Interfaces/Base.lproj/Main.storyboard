@@ -477,7 +477,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="qv4-x6-sJG">
-                                    <rect key="frame" x="0.0" y="455" width="375" height="80"/>
+                                    <rect key="frame" x="0.0" y="411" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep on Eating!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh4-63-Jsh">
@@ -663,14 +663,6 @@
                                         <rect key="frame" x="0.0" y="367" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oXU-OC-DoB" id="Z5H-AW-ikz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="developerCell" id="600-XO-nBW" customClass="PromotionsTableViewCell" customModule="yemekye" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="411" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="600-XO-nBW" id="qdu-GF-I0t">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -998,10 +990,10 @@
             </objects>
             <point key="canvasLocation" x="2327.1999999999998" y="1713.1934032983509"/>
         </scene>
-        <!--Options-->
+        <!--more-->
         <scene sceneID="zWn-NN-rrC">
             <objects>
-                <viewController id="t0c-T3-Zb5" customClass="MoreViewController" customModule="yemekye" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="more" id="t0c-T3-Zb5" customClass="MoreViewController" customModule="yemekye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ycv-F7-Dhq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1043,7 +1035,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZR-j1-Opn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="41"/>
+            <point key="canvasLocation" x="2017" y="306"/>
         </scene>
         <!--Login/Logout-->
         <scene sceneID="F86-g1-ZbJ">
@@ -1281,7 +1273,11 @@
                         <viewLayoutGuide key="safeArea" id="Ue2-ko-wdY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Select Location" id="TKO-RP-9oG">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="9UD-tW-oNl"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="9UD-tW-oNl">
+                            <connections>
+                                <action selector="cancel:" destination="Ott-oN-7xo" id="OSR-fs-9Cw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="leftBarButton" destination="9UD-tW-oNl" id="66t-tq-WtY"/>

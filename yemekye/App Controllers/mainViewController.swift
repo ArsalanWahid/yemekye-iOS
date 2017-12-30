@@ -39,7 +39,6 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
     struct StoryBoard{
         static let resturantCell = "resturantCell"
         static let promotionsCell = "promotionscCell"
-        static let developerCell = "developerCell"
         static let welcomeCell = "welcomeCell"
         static let resturantDetail = "resturantDetail"
         static let loginScreenFromResturant = "loginScreenFromResturant"
@@ -55,9 +54,7 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
         
     }
     
-    
-    
-    
+
     //MARK:- Private function
     private func setNavbar(){
         let middleItem = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
@@ -133,7 +130,7 @@ extension mainViewController{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return 3
         
     }
     
@@ -162,19 +159,7 @@ extension mainViewController{
             return cell
         }
         
-        if indexPath.row == 3{
-            let cell = Bundle.main.loadNibNamed("PromotionsTableViewCell", owner: self, options: nil)?.first as! PromotionsTableViewCell
-            
-            cell.promotionsLabel.text = "Developers"
-            cell.promotionsImage.image = UIImage(named: "laptop.png")
-            cell.accessoryType = .disclosureIndicator
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
-            return cell
-        }
-        
-        
-        
-        
+
         return UITableViewCell()
     }
     
