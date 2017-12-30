@@ -128,20 +128,20 @@ extension ResturantDetialViewController{
         
         //set info cell
         if indexPath.row == 0{
-            var temp:String = String()
             let cell = Bundle.main.loadNibNamed("InfoTableViewCell", owner: self, options: nil)?.first as! InfoTableViewCell
             
             cell.nameLabel.text = RData.Rdata.resturants[cellIndex].name
             cell.addressLabel.text = RData.Rdata.resturants[cellIndex].address
             cell.statusLabel.text = RData.Rdata.resturants[cellIndex].status
-            
-            //Pick all the timings that a resturant contains
-            for n in RData.Rdata.resturants[cellIndex].timing{
+            var time = ""
+            for n in RData.Rdata.resturants[cellIndex].timing
+            {
+                let (open,close) = n
+               
+                time += "\(open)-\(close)\n"
                 
-                temp.append(" \(n)")
-                print(temp)
             }
-            cell.timingsLabel.text = temp
+            cell.timingsLabel.text = time
             
             return cell
             
@@ -176,7 +176,7 @@ extension ResturantDetialViewController{
     //Controls the Custom heights of each cell
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0{
-            return CGFloat(150.0)
+            return CGFloat(186.0)
         }else if indexPath.row == 1{
             return CGFloat(100.0)
         }else if indexPath.row == 2{

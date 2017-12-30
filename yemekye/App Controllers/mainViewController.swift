@@ -72,9 +72,7 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
     }
     
     @objc private func searchView(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondViewController = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
-        self.present(secondViewController, animated: true, completion: nil)
+        performSegue(withIdentifier: "search", sender: nil)
     }
     
     //############NO IDEA HOW THIS WORKS#######################
