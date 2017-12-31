@@ -16,7 +16,7 @@ class SearchViewController: UIViewController ,UITableViewDataSource,UITableViewD
     //MARK:- Properties
     private var cellindex = 0
 
-    let defaultlocations = ["newyork","london","delhi"]
+    var defaultlocations: [Any] = []
     var filteredLocation:[Any] = []
     
 
@@ -26,8 +26,14 @@ class SearchViewController: UIViewController ,UITableViewDataSource,UITableViewD
     private var resultsController = UITableViewController()
     
     //MARK:- Outlets
-    
     @IBOutlet weak var leftBarButton: UIBarButtonItem!
+    
+    
+    //Actions
+    @IBAction func cancel(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     //MARK:- Life Cycle
     override func viewDidLoad() {
@@ -39,14 +45,46 @@ class SearchViewController: UIViewController ,UITableViewDataSource,UITableViewD
         searchBarController.dimsBackgroundDuringPresentation = false
         searchBarController.hidesNavigationBarDuringPresentation = false
         
+       defaultlocations = Request.getCityByName(q: "new york")
+        
+        print("locations recieved are \(defaultlocations)")
         
     }
 
     
+  
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+   
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return defaultlocations.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = (defaultlocations[indexPath.row] as! ZomatoCities).name
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cellindex = indexPath.row
+        
+        //When user clics the specifc city this will request location from zomato API
+        //After the data has been retrieved here then it will pass on to the main view controller where it will be used for futher processing
+    }
+    
+    
+    
+    
     //MARK:- Private func
     
     private func setUpNav(){
-    self.navigationController?.navigationBar.barTintColor = .red
+        self.navigationController?.navigationBar.barTintColor = .red
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.barStyle = .black
@@ -60,37 +98,11 @@ class SearchViewController: UIViewController ,UITableViewDataSource,UITableViewD
         leftBarButton.tintColor = .white
         searchBarController.searchBar.placeholder = "Enter Your search Here"
         searchBarController.searchBar.frame = CGRect(x: 0, y: 0, width: (navigationController?.view.bounds.size.width)!, height: 64)
-       searchBarController.searchBar.barStyle = .default
+        searchBarController.searchBar.barStyle = .default
         searchBarController.searchBar.isTranslucent = false
         searchBarController.searchBar.barTintColor = UIColor.red
         searchBarController.searchBar.backgroundImage = UIImage()
         view.addSubview(searchBarController.searchBar)
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func cancel(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return defaultlocations.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = defaultlocations[indexPath.row]
-        return cell
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        cellindex = indexPath.row
-        
-        //When user clics the specifc city this will request location from zomato API
-        //After the data has been retrieved here then it will pass on to the main view controller where it will be used for futher processing
     }
     
 }

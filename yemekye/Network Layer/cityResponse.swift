@@ -31,7 +31,7 @@ import ObjectMapper
 class CityResponse: Mappable {
     
     //conforming to the json respnse by zomato for cities
-    var location_suggestions : [zomatoCities]?
+    var location_suggestions : [ZomatoCities]?
     required init?(map: Map){
     }
     
@@ -41,10 +41,10 @@ class CityResponse: Mappable {
 }
 
 
-class zomatoCities : Mappable{
+class ZomatoCities : Mappable{
     
     
-   public var id:String?
+    var id:String?
     var name : String!
     var country_id:String!
     var country_name:String!

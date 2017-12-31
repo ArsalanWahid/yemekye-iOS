@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		932E432C88C253168DB7C118 /* Pods_yemekye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34C77475C04E36A313A85BE /* Pods_yemekye.framework */; };
 		D7109E851FD5C3150019E779 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7109E841FD5C3150019E779 /* SettingViewController.swift */; };
+		D713E65F1FF7D85800B6F023 /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D713E65E1FF7D85800B6F023 /* PagingMenuViewController.swift */; };
+		D713E6611FF8F0E600B6F023 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D713E6601FF8F0E600B6F023 /* constants.swift */; };
+		D713E6631FF8F6A300B6F023 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D713E6621FF8F6A300B6F023 /* LocationResponse.swift */; };
 		D72439411FD6A52600BB5A40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72439401FD6A52600BB5A40 /* User.swift */; };
 		D72439431FD6A53200BB5A40 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72439421FD6A53200BB5A40 /* Resturant.swift */; };
 		D72439471FD6A70D00BB5A40 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72439461FD6A70D00BB5A40 /* Menu.swift */; };
@@ -59,6 +62,9 @@
 		AA6A6716F4F53871CB2B4276 /* Pods-yemekye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yemekye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yemekye/Pods-yemekye.debug.xcconfig"; sourceTree = "<group>"; };
 		C34C77475C04E36A313A85BE /* Pods_yemekye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yemekye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7109E841FD5C3150019E779 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D713E65E1FF7D85800B6F023 /* PagingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingMenuViewController.swift; sourceTree = "<group>"; };
+		D713E6601FF8F0E600B6F023 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		D713E6621FF8F6A300B6F023 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
 		D72439401FD6A52600BB5A40 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D72439421FD6A53200BB5A40 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
 		D72439461FD6A70D00BB5A40 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -167,6 +173,8 @@
 				D735DE601FEE8E380036AFF3 /* BlackBox.swift */,
 				D7DF9C251FF51D7200F1324D /* Service.swift */,
 				D7DF9C271FF522D300F1324D /* cityResponse.swift */,
+				D713E6601FF8F0E600B6F023 /* constants.swift */,
+				D713E6621FF8F6A300B6F023 /* LocationResponse.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 				D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */,
 				D742F67B1FDC194F0007A970 /* PromotionsViewController.swift */,
 				D7A805421FF57D6400A57529 /* SearchViewController.swift */,
+				D713E65E1FF7D85800B6F023 /* PagingMenuViewController.swift */,
 			);
 			path = "App Controllers";
 			sourceTree = "<group>";
@@ -408,14 +417,13 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PagingMenuController/PagingMenuController.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -425,14 +433,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingMenuController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +465,8 @@
 				D7F124A41F9C8F50000491D4 /* AppDelegate.swift in Sources */,
 				D742F6781FDC12D50007A970 /* PromotionsTableViewCell.swift in Sources */,
 				D78810EB1FF1AC68008BF5C3 /* policyViewController.swift in Sources */,
+				D713E6631FF8F6A300B6F023 /* LocationResponse.swift in Sources */,
+				D713E65F1FF7D85800B6F023 /* PagingMenuViewController.swift in Sources */,
 				D7DF9C261FF51D7200F1324D /* Service.swift in Sources */,
 				D740F32E1FE2C20300D564D1 /* InfoTableViewCell.swift in Sources */,
 				D725B6F71FE421BD006B802B /* ActionsTableViewCell.swift in Sources */,
@@ -477,6 +486,7 @@
 				D742F67C1FDC194F0007A970 /* PromotionsViewController.swift in Sources */,
 				D77BCA821FEC1D0E00147449 /* developerViewController.swift in Sources */,
 				D742F6821FDC22D10007A970 /* resturantData.swift in Sources */,
+				D713E6611FF8F0E600B6F023 /* constants.swift in Sources */,
 				D7DF9C281FF522D300F1324D /* cityResponse.swift in Sources */,
 				D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */,
 				D7C9CA981FAC90A5006A2026 /* LoginManager.swift in Sources */,
