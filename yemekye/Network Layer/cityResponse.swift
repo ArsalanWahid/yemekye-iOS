@@ -44,15 +44,15 @@ class CityResponse: Mappable {
 class ZomatoCities : Mappable{
     
     
-    var id:String?
+    var id:Int!
     var name : String!
-    var country_id:String!
+    var country_id:Int!
     var country_name:String!
-    var is_state:Int?
-    var state_id:Int?
-    var state_name:String?
-    var state_code:String?
-    var location: String?
+    var is_state:Int!
+    var state_id:Int!
+    var state_name:String!
+    var state_code:String!
+    var location: String!
     
     required init?(map: Map){
         

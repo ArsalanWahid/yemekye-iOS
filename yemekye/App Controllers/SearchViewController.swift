@@ -7,25 +7,32 @@
 //
 
 import UIKit
-
-class SearchViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,UISearchResultsUpdating{
+import  Alamofire
+import AlamofireObjectMapper
+class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResultsUpdating{
+    
+    
     func updateSearchResults(for searchController: UISearchController) {
         
     }
     
     //MARK:- Properties
     private var cellindex = 0
-
-    var defaultlocations: [Any] = []
+    
+    var defaultlocations = ["1","2","3","4","5"]
+    
+    var defaultCities = [ZomatoCities]()
     var filteredLocation:[Any] = []
     
-
+   
     
     //must implement this in navbar
     private var searchBarController : UISearchController!
     private var resultsController = UITableViewController()
     
+    
     //MARK:- Outlets
+    
     @IBOutlet weak var leftBarButton: UIBarButtonItem!
     
     
@@ -45,14 +52,8 @@ class SearchViewController: UIViewController ,UITableViewDataSource,UITableViewD
         searchBarController.dimsBackgroundDuringPresentation = false
         searchBarController.hidesNavigationBarDuringPresentation = false
         
-       defaultlocations = Request.getCityByName(q: "new york")
-        
-        print("locations recieved are \(defaultlocations)")
-        
     }
-
-    
-  
+       
     
     
     override func didReceiveMemoryWarning() {
@@ -60,23 +61,9 @@ class SearchViewController: UIViewController ,UITableViewDataSource,UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-   
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return defaultlocations.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = (defaultlocations[indexPath.row] as! ZomatoCities).name
-        return cell
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        cellindex = indexPath.row
-        
-        //When user clics the specifc city this will request location from zomato API
-        //After the data has been retrieved here then it will pass on to the main view controller where it will be used for futher processing
-    }
+    
     
     
     
@@ -106,6 +93,27 @@ class SearchViewController: UIViewController ,UITableViewDataSource,UITableViewD
     }
     
 }
+
+//MARK:- Table Data Source & Delegate
+    extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return defaultCities.count
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell  = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text = defaultCities[indexPath.row].name
+            return cell
+        }
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            cellindex = indexPath.row
+            
+            //When user clics the specifc city this will request location from zomato API
+            //After the data has been retrieved here then it will pass on to the main view controller where it will be used for futher processing
+        }
+        
+    }
 
 extension UIImage {
     
