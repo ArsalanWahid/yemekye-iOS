@@ -18,27 +18,41 @@ class Request{
         
     ]
     
-  static var cityCollection = [ZomatoCities]()
+    //THis will be populated by the request method that the app can later use
+    static var cityCollection = [ZomatoCities]()
     
     //MARK:- Get city by name
-    static func getCityByName(q:String?){
-       
-        let parameters = [
-            
-            "q": "\(q!)",
-            "count":"\(10)"
-        ]
+    static func getCityByName(q:String?) -> [ZomatoCities]{
+        
+        let parameters = ["q": "\(q!)","count":"\(10)"]
+        
         let URL = "https://developers.zomato.com/api/v2.1/cities"
         Alamofire.request(URL,parameters:parameters,headers: headers).responseObject { (response: DataResponse<CityResponse>) in
             
             let requestURL = response.request?.url?.absoluteString
             print(requestURL ?? "")
             
-            let cityResponse = response.result.value?.location_suggestions
-            let result = cityResponse
-            
+            let cityResponse = response.result.value
+            if let response  = cityResponse?.location_suggestions{
+                for city in response{
+//                    print(city.country_id)
+//                    print(city.name)
+//                    print(city.country_id)
+//                    print(city.country_name)
+//                    print(city.is_state)
+//                    print(city.state_name)
+//                    print(city.state_code)
+//                    print(city.location)
+                    //this should populate the [ZomatoCity array with data ]
+                    cityCollection.append(city)
+                }
             }
+            print(cityCollection)
+            
         }
+        return cityCollection
+    
+    }
     
     
 }

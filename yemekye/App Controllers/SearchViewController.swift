@@ -52,7 +52,19 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
         searchBarController.dimsBackgroundDuringPresentation = false
         searchBarController.hidesNavigationBarDuringPresentation = false
         
-    }
+        
+        
+        
+        //API city call
+         Request.getCityByName(q: "london")
+        
+        delayWithSeconds(3){
+        self.defaultCities = Request.cityCollection
+        }
+        print("data recieved")
+        print(defaultCities)
+        
+        }
        
     
     
@@ -62,7 +74,11 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
     }
     
     
-    
+    func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            completion()
+        }
+    }
     
     
     
