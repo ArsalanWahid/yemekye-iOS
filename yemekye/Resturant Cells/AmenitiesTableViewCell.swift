@@ -12,4 +12,15 @@ class AmenitiesTableViewCell: UITableViewCell {
 
    
     
+    @IBOutlet weak var phone: UIButton!
+    
+    @IBAction func phoneNumber(_ sender: UIButton) {
+        let url :NSURL = NSURL(string: "tel://\(phone.titleLabel?.text)")!
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+    }
+    @IBOutlet weak var cuisinesLabel: UILabel!
+    @IBOutlet weak var avgCostLabel: UILabel!
+    @IBOutlet weak var currency: UILabel!
+    
+    
 }

@@ -34,6 +34,11 @@ var cellIndex = 0
 class mainViewController: UIViewController , UITableViewDelegate,UITableViewDataSource{
    
     
+    @IBOutlet weak var tableview: UITableView!
+    
+    
+
+    
     
     //MARK:- Cell Identifiers
     struct StoryBoard{
@@ -51,8 +56,46 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
         navigationController?.navigationBar.barTintColor = .red
         fetchProfile()
         setNavbar()
-        
+        tableview.reloadData()
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if  Auth.auth().currentUser != nil || LoginManager.LoginStatus.isLoggedIn{
+            print("user is loggd in ")
+        }else{
+            UIView.setAnimationsEnabled(false)
+            performSegue(withIdentifier: StoryBoard.loginScreenFromResturant, sender: nil)
+        }
+        
+        //MARK:- Returant data obtained here !!
+        if LoginManager.LoginStatus.resturantIDsRecieved == true{
+            
+            // Request for the resturant data here pleae
+            print("requesting data for resturants")
+            print("REquest value = \(LoginManager.LoginStatus.resturantIDsRecieved)")
+            
+            let loop = _Resturants_ids.prefix(5)
+            let newarray = Array(loop)
+            for n in newarray{
+                
+                Request.getResturantInfo(From: Int(n)!)
+               DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                
+                print(ResturantsFromAPI.count)
+                print("getting data")
+                 self.tableview.reloadData()
+                
+               })
+                
+                print("data gotten")
+            }
+       //  LoginManager.LoginStatus.resturantIDsRecieved = false
+        }else{
+            //keep the conventioanl data
+        }
+    }
+    
     
 
     //MARK:- Private function
@@ -66,6 +109,7 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
         searchButton.addTarget(self, action: #selector(searchView), for: UIControlEvents.touchUpInside)
         middleItem.addSubview(searchButton)
         self.navigationItem.titleView = middleItem
+        navigationItem.backBarButtonItem?.tintColor = .white
     }
     
     @objc private func searchView(){
@@ -104,14 +148,7 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
     
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        if  Auth.auth().currentUser != nil || LoginManager.LoginStatus.isLoggedIn{
-            print("user is loggd in ")
-        }else{
-            performSegue(withIdentifier: StoryBoard.loginScreenFromResturant, sender: nil)
-        }
-    }
-    
+
     
     
     //MARK:- Navigation
@@ -133,6 +170,9 @@ extension mainViewController{
         return 3
         
     }
+    
+    
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         /*Use when loading from custom xib file*/
@@ -170,7 +210,6 @@ extension mainViewController{
                 cell.collectionView.dataSource = self
                 cell.collectionView.delegate = self
                 cell.collectionView.reloadData()
-                cell.collectionView.isScrollEnabled = false
             }
         }
     }
@@ -210,11 +249,19 @@ extension mainViewController{
 }
 
 //MARK:- UICollectionViewDataSource
-extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
+extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate{
     
     //This will show the 4 resturants
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        
+        if LoginManager.LoginStatus.resturantIDsRecieved == false{
+           
+            return 4
+        }else{
+            //will return count for total resturants here
+            return ResturantsFromAPI.count
+        }
+        return 0
     }
     
     
@@ -222,22 +269,48 @@ extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryBoard.resturantCell, for: indexPath) as! ResturantsCollectionViewCell
         
+        if LoginManager.LoginStatus.resturantIDsRecieved == true{
+            cell.nameLabel.text = ResturantsFromAPI[indexPath.row].name
+            cell.addressLabel.text = ResturantsFromAPI[indexPath.row].location.locality
+            cell.rating.text = ResturantsFromAPI[indexPath.row].user_rating.aggregate_rating
+            
+            return cell
+            collectionView.reloadData()
+        }else{
+        
         cell.image = RData.Rdata.resturants[indexPath.row].resturantImage
         cell.nameLabel.text = RData.Rdata.resturants[indexPath.row].name
         cell.addressLabel.text = RData.Rdata.resturants[indexPath.row].address
         cell.rating.text = String(RData.Rdata.resturants[indexPath.row].rating)
         return cell
         
+        }
+        
     }
+    
+    //MARK:- to be implemented
+    func loadImageOverNetwork(with URL: String) {
+        
+        
+    }
+    
     
     //This will perform logic for when item from collection  view is selected
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        LoginManager.LoginStatus.resturantIDsRecieved = false
         cellIndex = indexPath.row
         print("User has selected \(cellIndex) from collection View on main app controller")
+        if cellIndex <= 4 {
         let image: UIImage =  RData.Rdata.resturants[cellIndex].resturantImage
-        performSegue(withIdentifier: StoryBoard.resturantDetail, sender: image)
+        
+            performSegue(withIdentifier: StoryBoard.resturantDetail, sender: image)
+            
+        }
     }
     
+
+
+  
 }
 
 

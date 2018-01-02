@@ -9,6 +9,8 @@
 import UIKit
 import  Alamofire
 import AlamofireObjectMapper
+
+
 class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResultsUpdating{
     
     
@@ -56,12 +58,6 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
         
         
         
-        
-
-    //API call and data been assigned 
-       //Request.getCityByName(q: "london")
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,8 +79,6 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
             
             
         }
-        
-        
     }
     
     
@@ -132,10 +126,18 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
         }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             cellindex = indexPath.row
-            
-            //When user clics the specifc city this will request location from zomato API
-            //After the data has been retrieved here then it will pass on to the main view controller where it will be used for futher processing
+            LoginManager.LoginStatus.locationChanged = 1
+            Request.getLocationDetial(Searchedlocations[indexPath.row].entity_id, Searchedlocations[indexPath.row].entity_type)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // in half a second...
+                print("data has been recieved here are the resturants")
+                print(_Resturants_ids)
+                LoginManager.LoginStatus.resturantIDsRecieved = true
+                self.dismiss(animated: true, completion: nil)
+            }
+            dismiss(animated: true, completion: nil)
         }
+        
+        
         
     }
 

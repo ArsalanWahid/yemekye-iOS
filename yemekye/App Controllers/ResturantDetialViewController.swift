@@ -78,8 +78,13 @@ class ResturantDetialViewController: UITableViewController{
         
         //MARK:- NavigationBar
 
-        self.navigationItem.title = RData.Rdata.resturants[cellIndex].name
+        if ResturantsFromAPI.count > 0{
+        self.navigationItem.title = ResturantsFromAPI[cellIndex].name
+        }else{
+            self.navigationItem.title = RData.Rdata.resturants[cellIndex].name
+        }
         
+        navigationItem.backBarButtonItem?.tintColor = .white
         
     }
     
@@ -130,9 +135,10 @@ extension ResturantDetialViewController{
         if indexPath.row == 0{
             let cell = Bundle.main.loadNibNamed("InfoTableViewCell", owner: self, options: nil)?.first as! InfoTableViewCell
             
-            cell.nameLabel.text = RData.Rdata.resturants[cellIndex].name
-            cell.addressLabel.text = RData.Rdata.resturants[cellIndex].address
-            cell.statusLabel.text = RData.Rdata.resturants[cellIndex].status
+            if ResturantsFromAPI.count >= 1{
+            cell.nameLabel.text = ResturantsFromAPI[cellIndex].name
+            cell.addressLabel.text = ResturantsFromAPI[cellIndex].location.locality
+            cell.statusLabel.text = ResturantsFromAPI[cellIndex].user_rating.aggregate_rating
             var time = ""
             for n in RData.Rdata.resturants[cellIndex].timing
             {
@@ -142,7 +148,20 @@ extension ResturantDetialViewController{
                 
             }
             cell.timingsLabel.text = time
-            
+            }else{
+                cell.nameLabel.text = RData.Rdata.resturants[cellIndex].name
+                cell.addressLabel.text = RData.Rdata.resturants[cellIndex].address
+                cell.statusLabel.text = RData.Rdata.resturants[cellIndex].status
+                var time = ""
+                for n in RData.Rdata.resturants[cellIndex].timing
+                {
+                    let (open,close) = n
+                    
+                    time += "\(open)-\(close)\n"
+                    
+                }
+                cell.timingsLabel.text = time
+            }
             return cell
             
         }
@@ -150,6 +169,8 @@ extension ResturantDetialViewController{
         else if indexPath.row == 1{
             let cell = Bundle.main.loadNibNamed("ActionsTableViewCell", owner: self, options: nil)?.first as! ActionsTableViewCell
             cell.selectionStyle = UITableViewCellSelectionStyle.none
+            cell.phone.titleLabel?.text = ResturantsFromAPI[cellIndex].phone_numbers
+            cell.website.titleLabel?.text = ResturantsFromAPI[cellIndex].url
             return cell
             
         }else if indexPath.row == 2{
@@ -163,6 +184,10 @@ extension ResturantDetialViewController{
             
             let cell = Bundle.main.loadNibNamed("AmenitiesTableViewCell", owner: self, options: nil)?.first as! AmenitiesTableViewCell
             cell.selectionStyle = UITableViewCellSelectionStyle.none
+            cell.phone.titleLabel?.text = ResturantsFromAPI[cellIndex].phone_numbers
+            cell.cuisinesLabel.text = ResturantsFromAPI[cellIndex].cusines
+            cell.avgCostLabel.text = String(ResturantsFromAPI[cellIndex].average_cost_for_two)
+            cell.currency.text = ResturantsFromAPI[cellIndex].currency
             return cell
         }else{
             fatalError("no cell exists in ResturantDetailViewconteller")

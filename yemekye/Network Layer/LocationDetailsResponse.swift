@@ -13,48 +13,60 @@ import ObjectMapper
 class LocationDetailResponse: Mappable{
     
     //conforming to the json respnse by zomato for cities
-    var location_suggestions : LocationDetail?
+    var popularity: String?
+    var nightlife_index : String?
+    var nearby_res : [String]?
+    
+    
     required init?(map: Map){
     }
     
     func mapping(map: Map) {
-        location_suggestions <- map["location_suggestions"]
+        popularity <- map["popularity"]
+        nightlife_index <- map["nightlife_index"]
+        nearby_res <- map["nearby_res"]
     }
 }
 
 
+//class nearByResturants {
+//
+//
+//
+//}
 
-
-class LocationDetail: Mappable{
-    
-    var entity_type: String!
-    var entity_id: Int!
-    var title: String!
-    var latitude: Double!
-    var longitude: Double!
-    var city_id: Int!
-    var city_name: String!
-    var country_id: Int!
-    var country_name: String!
-    
-    required init?(map: Map){
-        
-    }
-    
-    
-    func mapping(map: Map){
-        
-        entity_type <- map["entity_type"]
-        entity_id   <- map["entity_id"]
-        title <- map["title"]
-        latitude <- map["latitude"]
-        longitude <- map["longitude"]
-        city_id <- map["city_id"]
-        city_name <- map["city_name"]
-        country_id <- map["country_id"]
-        country_name <- map["country_name"]
-        
-    }
-    
-}
+//
+//
+//class LocationDetail: Mappable{
+//
+//    var entity_type: String!
+//    var entity_id: Int!
+//    var title: String!
+//    var latitude: Double!
+//    var longitude: Double!
+//    var city_id: Int!
+//    var city_name: String!
+//    var country_id: Int!
+//    var country_name: String!
+//
+//    required init?(map: Map){
+//
+//    }
+//
+//
+//    func mapping(map: Map){
+//
+//        entity_type <- map["entity_type"]
+//        entity_id   <- map["entity_id"]
+//        title <- map["title"]
+//        latitude <- map["latitude"]
+//        longitude <- map["longitude"]
+//        city_id <- map["city_id"]
+//        city_name <- map["city_name"]
+//        country_id <- map["country_id"]
+//        country_name <- map["country_name"]
+//
+//    }
+//
+//}
 

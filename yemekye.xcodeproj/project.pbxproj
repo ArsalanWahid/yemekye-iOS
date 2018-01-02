@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		932E432C88C253168DB7C118 /* Pods_yemekye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34C77475C04E36A313A85BE /* Pods_yemekye.framework */; };
 		D7109E851FD5C3150019E779 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7109E841FD5C3150019E779 /* SettingViewController.swift */; };
-		D713E65F1FF7D85800B6F023 /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D713E65E1FF7D85800B6F023 /* PagingMenuViewController.swift */; };
 		D713E6611FF8F0E600B6F023 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D713E6601FF8F0E600B6F023 /* constants.swift */; };
 		D713E6631FF8F6A300B6F023 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D713E6621FF8F6A300B6F023 /* LocationResponse.swift */; };
 		D72439411FD6A52600BB5A40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72439401FD6A52600BB5A40 /* User.swift */; };
@@ -37,6 +36,8 @@
 		D75F12E01FD801CA00AE58CC /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75F12DF1FD801CA00AE58CC /* data.swift */; };
 		D762275D1FA8C10B007B82E7 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */; };
 		D7686B6D1FA384CD00C8A83A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */; };
+		D77B61A61FFBC3B900A85D7A /* ResturantResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77B61A51FFBC3B900A85D7A /* ResturantResponse.swift */; };
+		D77B61AA1FFBF5C900A85D7A /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77B61A91FFBF5C900A85D7A /* TestTableViewController.swift */; };
 		D77BCA821FEC1D0E00147449 /* developerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77BCA811FEC1D0E00147449 /* developerViewController.swift */; };
 		D78810E91FF1A20B008BF5C3 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78810E81FF1A20B008BF5C3 /* MealTableViewCell.swift */; };
 		D78810EB1FF1AC68008BF5C3 /* policyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78810EA1FF1AC68008BF5C3 /* policyViewController.swift */; };
@@ -63,7 +64,6 @@
 		AA6A6716F4F53871CB2B4276 /* Pods-yemekye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yemekye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yemekye/Pods-yemekye.debug.xcconfig"; sourceTree = "<group>"; };
 		C34C77475C04E36A313A85BE /* Pods_yemekye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yemekye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7109E841FD5C3150019E779 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		D713E65E1FF7D85800B6F023 /* PagingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingMenuViewController.swift; sourceTree = "<group>"; };
 		D713E6601FF8F0E600B6F023 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		D713E6621FF8F6A300B6F023 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
 		D72439401FD6A52600BB5A40 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -91,6 +91,8 @@
 		D75F12DF1FD801CA00AE58CC /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		D762275C1FA8C10B007B82E7 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		D7686B6C1FA384CD00C8A83A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D77B61A51FFBC3B900A85D7A /* ResturantResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantResponse.swift; sourceTree = "<group>"; };
+		D77B61A91FFBF5C900A85D7A /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		D77BCA811FEC1D0E00147449 /* developerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = developerViewController.swift; sourceTree = "<group>"; };
 		D78810E81FF1A20B008BF5C3 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		D78810EA1FF1AC68008BF5C3 /* policyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policyViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				D7DF9C271FF522D300F1324D /* cityResponse.swift */,
 				D713E6621FF8F6A300B6F023 /* LocationResponse.swift */,
 				D795B3C01FFBB2FA00F5B600 /* LocationDetailsResponse.swift */,
+				D77B61A51FFBC3B900A85D7A /* ResturantResponse.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -214,7 +217,7 @@
 				D7B78C871FD57A9300A9CEC8 /* MoreViewController.swift */,
 				D742F67B1FDC194F0007A970 /* PromotionsViewController.swift */,
 				D7A805421FF57D6400A57529 /* SearchViewController.swift */,
-				D713E65E1FF7D85800B6F023 /* PagingMenuViewController.swift */,
+				D77B61A91FFBF5C900A85D7A /* TestTableViewController.swift */,
 			);
 			path = "App Controllers";
 			sourceTree = "<group>";
@@ -470,10 +473,10 @@
 				D742F6781FDC12D50007A970 /* PromotionsTableViewCell.swift in Sources */,
 				D78810EB1FF1AC68008BF5C3 /* policyViewController.swift in Sources */,
 				D713E6631FF8F6A300B6F023 /* LocationResponse.swift in Sources */,
-				D713E65F1FF7D85800B6F023 /* PagingMenuViewController.swift in Sources */,
 				D7DF9C261FF51D7200F1324D /* Service.swift in Sources */,
 				D740F32E1FE2C20300D564D1 /* InfoTableViewCell.swift in Sources */,
 				D725B6F71FE421BD006B802B /* ActionsTableViewCell.swift in Sources */,
+				D77B61A61FFBC3B900A85D7A /* ResturantResponse.swift in Sources */,
 				D724394F1FD6AB0900BB5A40 /* Cities.swift in Sources */,
 				D7A805431FF57D6400A57529 /* SearchViewController.swift in Sources */,
 				D7109E851FD5C3150019E779 /* SettingViewController.swift in Sources */,
@@ -488,6 +491,7 @@
 				D735DE6A1FF116B00036AFF3 /* AmenitiesTableViewCell.swift in Sources */,
 				D72439471FD6A70D00BB5A40 /* Menu.swift in Sources */,
 				D742F67C1FDC194F0007A970 /* PromotionsViewController.swift in Sources */,
+				D77B61AA1FFBF5C900A85D7A /* TestTableViewController.swift in Sources */,
 				D77BCA821FEC1D0E00147449 /* developerViewController.swift in Sources */,
 				D742F6821FDC22D10007A970 /* resturantData.swift in Sources */,
 				D713E6611FF8F0E600B6F023 /* constants.swift in Sources */,
@@ -636,7 +640,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 44R9FC56QP;
 				INFOPLIST_FILE = yemekye/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -658,7 +662,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 44R9FC56QP;
 				INFOPLIST_FILE = yemekye/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

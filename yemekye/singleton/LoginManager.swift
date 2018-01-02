@@ -13,6 +13,8 @@ class LoginManager{
     
     
     var isLoggedIn = false
+    var resturantIDsRecieved = false
+    var locationChanged = 0
     static let LoginStatus = LoginManager()
     
 }

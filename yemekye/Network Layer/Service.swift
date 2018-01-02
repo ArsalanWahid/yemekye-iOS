@@ -14,7 +14,9 @@ import Alamofire
 //stores data from the API calls
 var _cityCollection = [ZomatoCities]()
 var _LocationsFromAPI = [Locations]()
-var _LocationDetail = [LocationDetail]()
+var _Resturants_ids = [String]()
+var ResturantsFromAPI = [ResturantResponse]()
+//var _LocationDetail = [LocationDetail]()
 
 class Request{
     
@@ -94,27 +96,47 @@ class Request{
     
     //MARK:- Get Location Detail
     
-//    static func getLocationDetial(_ entity_id: Int , _ entity_type: String){
-//
-//        _LocationDetail = []
-//        let parameters = ["entity_id" : "\(entity_id)" , "entity_type" : "\(entity_type)"]
-//        let URL = "https://developers.zomato.com/api/v2.1/location_details"
-//        Alamofire.request(URL,parameters:parameters,headers: headers).responseObject { (response: DataResponse<LocationDetailResponse>) in
-//            var requestURL = response.request?.url?.absoluteString
-//            let LocationDetailResponse = response.result.value
-//            if let response = LocationResponse?.location_suggestions{
-//                print("The response from the locations are \(response)")
-//                for location in response {
-//                    _LocationsFromAPI.append(location)
-//                }
-//            }
-//        }
-//        
-//
+    static func getLocationDetial(_ entity_id: Int , _ entity_type: String){
+
+        _Resturants_ids = []
+        let parameters = ["entity_id" : "\(entity_id)" , "entity_type" : "\(entity_type)"]
+        let URL = "https://developers.zomato.com/api/v2.1/location_details"
+        Alamofire.request(URL,parameters:parameters,headers: headers).responseObject { (response: DataResponse<LocationDetailResponse>) in
+            var requestURL = response.request?.url?.absoluteString
+            let LocationDetailResponse = response.result.value
+            
+            //TO MUCH DATA BEING GOT
+            if let response = LocationDetailResponse?.popularity{
+                print(response)
+            }
+            if let response = LocationDetailResponse?.nearby_res{
+                for n in response{
+                    _Resturants_ids.append(n)
+                }
+            }
+            
+        }
+    }
     
+    
+    
+    //MARK:- Get Single REsturant Info
+    
+    static func getResturantInfo(From id : Int){
         
+        let parameters = ["res_id":"\(id)"]
+        let URL = "https://developers.zomato.com/api/v2.1/restaurant"
+        Alamofire.request(URL,parameters:parameters,headers: headers).responseObject { (response: DataResponse<ResturantResponse>) in
+            
+            let ResturantResponse = response.result.value
         
-//    }
+            if let response = ResturantResponse{
+                ResturantsFromAPI.append(response)
+            }
+            
+        }
+        
+    }
 
 
 }
