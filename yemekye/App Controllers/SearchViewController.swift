@@ -21,8 +21,8 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
     
     var defaultlocations = ["1","2","3","4","5"]
     
-    var defaultCities = [ZomatoCities]()
-    var filteredLocation:[Any] = []
+   var Searchedlocations = [Locations]()
+    
     
    
     
@@ -52,24 +52,17 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
         searchBarController.searchResultsUpdater = self
         searchBarController.dimsBackgroundDuringPresentation = false
         searchBarController.hidesNavigationBarDuringPresentation = false
+        searchBarController.searchBar.delegate = self 
         
         
         
         
 
     //API call and data been assigned 
-       Request.getCityByName(q: "london")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // in half a second...
+       //Request.getCityByName(q: "london")
         
-            self.defaultCities = cityCollection
-            print("The elements in the city are \(self.defaultCities.count)")
-            self.tableview.reloadData()
-        }
-    
+        
     }
-    
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -77,7 +70,22 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
     }
     
     
- 
+    //MARK:- UISearchBar
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        Request.getLocation(searchBarController.searchBar.text!)
+        print(searchBarController.searchBar.text)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // in half a second...
+            
+            self.Searchedlocations = _LocationsFromAPI
+            print("The elements in the city are \(self.Searchedlocations.count)")
+            self.tableview.reloadData()
+            
+            
+            
+        }
+        
+        
+    }
     
     
     
@@ -108,16 +116,18 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
     
 }
 
+
+
 //MARK:- Table Data Source & Delegate
     extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return defaultCities.count
+            return Searchedlocations.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell  = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.textLabel?.text = defaultCities[indexPath.row].name
+            cell.textLabel?.text = Searchedlocations[indexPath.row].title
             return cell
         }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

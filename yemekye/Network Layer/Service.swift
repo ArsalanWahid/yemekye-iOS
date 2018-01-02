@@ -12,7 +12,9 @@ import Alamofire
 
 
 //stores data from the API calls
-var cityCollection = [ZomatoCities]()
+var _cityCollection = [ZomatoCities]()
+var _LocationsFromAPI = [Locations]()
+var _LocationDetail = [LocationDetail]()
 
 class Request{
     
@@ -51,7 +53,7 @@ class Request{
                                         print(city.state_code)
                                         print(city.location)
                     //this should populate the [ZomatoCity array with data ]
-                    cityCollection.append(city)
+                    _cityCollection.append(city)
                 }
               //  completion(cityCollection)
             }
@@ -59,65 +61,61 @@ class Request{
     }
     
     
-}
 
 
 
 
 
+
+
+    //MARK:- Get Location
+    static func getLocation(_ query: String){
+
+        //Will be populated by response from API
+        //Makes sure previous data is removed
+        _LocationsFromAPI = []
+        let parameters = [Constants.ParametersKeys.query : "\(query)","count":"\(10)"]
+        let URL = "\(Constants.Zomato.APIBaseURL)\(Constants.Method.locations)"
+        print(URL)
+        print(parameters)
+
+        Alamofire.request(URL,parameters:parameters,headers: headers).responseObject { (response: DataResponse<LocationResponse>) in
+            var requestURL = response.request?.url?.absoluteString
+            let LocationResponse = response.result.value
+            if let response = LocationResponse?.location_suggestions{
+                print("The response from the locations are \(response)")
+                for location in response {
+                    _LocationsFromAPI.append(location)
+                }
+            }
+        }
+    }
+    
+    
+    //MARK:- Get Location Detail
+    
+//    static func getLocationDetial(_ entity_id: Int , _ entity_type: String){
 //
-//    //MARK:- Get City by locations
-//    static func getCityByLocation(longitude lon :Double, latitude lat:Double) {
-//
-//        let parameters = ["lat":"\(lat)","lon": "\(lon)"]
-//        let URL = "https://developers.zomato.com/api/v2.1/cities"
-//        let URL1 = ("\(Constants.Zomato.APIBaseURL)+\(Constants.Method.cities)")
-//        Alamofire.request(URL1,parameters:parameters,headers:headers).responseObject { (response: DataResponse<CityResponse>) in
-//            print("Response code: \((response.response?.statusCode)!)")
-//            if (response.response?.statusCode)! == 200 {
-//                var requestURL = response.request?.url?.absoluteString
-//                let cityResponse = response.result.value
-//                if cityResponse?.location_suggestions?.count == 0 {
-//                    print("No items recieved: \n")
-//                }
-//                else{
-//                    for city in (cityResponse?.location_suggestions)! {
-//                        print(city)
-//                    }
-//                }
-//            }
-//        }
-//
-//    }
-//
-//
-//    //MARK:- Get Location
-//    static func getLocation(_ query: String) -> [Locations]{
-//
-//        //Will be populated by response from API
-//        var locations:[Locations] = []
-//
-//        let parameters = [Constants.ParametersKeys.query : "\(query)"]
-//        let URL = "\(Constants.Zomato.APIBaseURL)\(Constants.Method.locations)"
-//        print(URL)
-//        print(parameters)
-//
-//        Alamofire.request(URL,parameters:parameters,headers: headers).responseObject { (response: DataResponse<LocationResponse>) in
+//        _LocationDetail = []
+//        let parameters = ["entity_id" : "\(entity_id)" , "entity_type" : "\(entity_type)"]
+//        let URL = "https://developers.zomato.com/api/v2.1/location_details"
+//        Alamofire.request(URL,parameters:parameters,headers: headers).responseObject { (response: DataResponse<LocationDetailResponse>) in
 //            var requestURL = response.request?.url?.absoluteString
-//            let LocationResponse = response.result.value
+//            let LocationDetailResponse = response.result.value
 //            if let response = LocationResponse?.location_suggestions{
 //                print("The response from the locations are \(response)")
 //                for location in response {
-//                    locations.append(location)
-//                    print("The locations returned are \(location.city_name!)")
+//                    _LocationsFromAPI.append(location)
 //                }
-//
 //            }
-//
 //        }
-//        return locations
+//        
+//
+    
+        
+        
 //    }
-//
-//
-//}
+
+
+}
 

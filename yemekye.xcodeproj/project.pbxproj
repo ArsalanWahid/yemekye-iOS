@@ -41,6 +41,7 @@
 		D78810E91FF1A20B008BF5C3 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78810E81FF1A20B008BF5C3 /* MealTableViewCell.swift */; };
 		D78810EB1FF1AC68008BF5C3 /* policyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78810EA1FF1AC68008BF5C3 /* policyViewController.swift */; };
 		D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */; };
+		D795B3C11FFBB2FA00F5B600 /* LocationDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D795B3C01FFBB2FA00F5B600 /* LocationDetailsResponse.swift */; };
 		D7A805431FF57D6400A57529 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A805421FF57D6400A57529 /* SearchViewController.swift */; };
 		D7AF08A41FDAE7190095E58B /* ResturantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF08A31FDAE7190095E58B /* ResturantsTableViewCell.swift */; };
 		D7AF08A61FDAE7C90095E58B /* ResturantsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF08A51FDAE7C90095E58B /* ResturantsCollectionViewCell.swift */; };
@@ -94,6 +95,7 @@
 		D78810E81FF1A20B008BF5C3 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		D78810EA1FF1AC68008BF5C3 /* policyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policyViewController.swift; sourceTree = "<group>"; };
 		D78E589A1FA33A22000FCA17 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D795B3C01FFBB2FA00F5B600 /* LocationDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsResponse.swift; sourceTree = "<group>"; };
 		D7A805421FF57D6400A57529 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D7AF08A31FDAE7190095E58B /* ResturantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsTableViewCell.swift; sourceTree = "<group>"; };
 		D7AF08A51FDAE7C90095E58B /* ResturantsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -172,9 +174,10 @@
 			children = (
 				D735DE601FEE8E380036AFF3 /* BlackBox.swift */,
 				D7DF9C251FF51D7200F1324D /* Service.swift */,
-				D7DF9C271FF522D300F1324D /* cityResponse.swift */,
 				D713E6601FF8F0E600B6F023 /* constants.swift */,
+				D7DF9C271FF522D300F1324D /* cityResponse.swift */,
 				D713E6621FF8F6A300B6F023 /* LocationResponse.swift */,
+				D795B3C01FFBB2FA00F5B600 /* LocationDetailsResponse.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -278,9 +281,9 @@
 		D7F124A21F9C8F50000491D4 /* yemekye */ = {
 			isa = PBXGroup;
 			children = (
-				D735DE5F1FEE8E250036AFF3 /* Network Layer */,
 				D7F124AF1F9C8F50000491D4 /* Info.plist */,
 				D725B6F91FE54D85006B802B /* GoogleService-Info.plist */,
+				D735DE5F1FEE8E250036AFF3 /* Network Layer */,
 				D74FE3DB1FA33FB400B533AB /* Interfaces */,
 				D7AF08A21FDAE4BD0095E58B /* singleton */,
 				D7A7B77B1FD71F5E00F31155 /* Models */,
@@ -459,6 +462,7 @@
 				D7F124A61F9C8F50000491D4 /* LoginViewController.swift in Sources */,
 				D75F12E01FD801CA00AE58CC /* data.swift in Sources */,
 				D742F67F1FDC1D600007A970 /* WelcomeTableViewCell.swift in Sources */,
+				D795B3C11FFBB2FA00F5B600 /* LocationDetailsResponse.swift in Sources */,
 				D72439431FD6A53200BB5A40 /* Resturant.swift in Sources */,
 				D726AD691F9CCBFE00C37CFA /* ResturantDetialViewController.swift in Sources */,
 				D78E589B1FA33A22000FCA17 /* RegisterViewController.swift in Sources */,
@@ -632,9 +636,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W2ZMAPYRZ7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = yemekye/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asghars.yemekye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -654,9 +658,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W2ZMAPYRZ7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = yemekye/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asghars.yemekye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
