@@ -10,6 +10,10 @@
 import AlamofireObjectMapper
 import Alamofire
 
+
+//stores data from the API calls
+var cityCollection = [ZomatoCities]()
+
 class Request{
     
     //MARK:- Global header
@@ -18,11 +22,14 @@ class Request{
         
     ]
     
+
+
+    
     //THis will be populated by the request method that the app can later use
-    static var cityCollection = [ZomatoCities]()
+    
     
     //MARK:- Get city by name
-    static func getCityByName(q:String?) -> [ZomatoCities]{
+    static func getCityByName(q: String?){
         
         let parameters = ["q": "\(q!)","count":"\(10)"]
         
@@ -35,23 +42,20 @@ class Request{
             let cityResponse = response.result.value
             if let response  = cityResponse?.location_suggestions{
                 for city in response{
-//                    print(city.country_id)
-//                    print(city.name)
-//                    print(city.country_id)
-//                    print(city.country_name)
-//                    print(city.is_state)
-//                    print(city.state_name)
-//                    print(city.state_code)
-//                    print(city.location)
+                                        print(city.country_id)
+                                        print(city.name)
+                                        print(city.country_id)
+                                        print(city.country_name)
+                                        print(city.is_state)
+                                        print(city.state_name)
+                                        print(city.state_code)
+                                        print(city.location)
                     //this should populate the [ZomatoCity array with data ]
                     cityCollection.append(city)
                 }
+              //  completion(cityCollection)
             }
-            print(cityCollection)
-            
         }
-        return cityCollection
-    
     }
     
     

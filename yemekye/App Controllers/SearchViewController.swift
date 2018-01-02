@@ -35,6 +35,7 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
     
     @IBOutlet weak var leftBarButton: UIBarButtonItem!
     
+    @IBOutlet weak var tableview: UITableView!
     
     //Actions
     @IBAction func cancel(_ sender: UIButton) {
@@ -55,17 +56,19 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
         
         
         
-        //API city call
-         Request.getCityByName(q: "london")
+
+    //API call and data been assigned 
+       Request.getCityByName(q: "london")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // in half a second...
         
-        delayWithSeconds(3){
-        self.defaultCities = Request.cityCollection
-        }
-        print("data recieved")
-        print(defaultCities)
         
+            print("The elements in the city are \(self.defaultCities.count)")
+            self.tableview.reloadData()
         }
-       
+    
+    }
+    
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -74,12 +77,7 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
     }
     
     
-    func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            completion()
-        }
-    }
-    
+ 
     
     
     

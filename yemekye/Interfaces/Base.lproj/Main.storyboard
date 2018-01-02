@@ -991,7 +991,7 @@
         <scene sceneID="7se-em-x0x">
             <objects>
                 <viewController title="Forgot Password" id="RvN-FO-3g5" customClass="ResetPasswordViewController" customModule="yemekye" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uUw-bY-h3s">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="uUw-bY-h3s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1317,6 +1317,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="leftBarButton" destination="9UD-tW-oNl" id="66t-tq-WtY"/>
+                        <outlet property="tableview" destination="G3Y-aO-qiQ" id="OJi-PQ-GdX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQY-5R-ZZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
