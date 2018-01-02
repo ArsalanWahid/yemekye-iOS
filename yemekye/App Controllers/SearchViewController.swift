@@ -61,7 +61,7 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
        Request.getCityByName(q: "london")
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // in half a second...
         
-        
+            self.defaultCities = cityCollection
             print("The elements in the city are \(self.defaultCities.count)")
             self.tableview.reloadData()
         }
