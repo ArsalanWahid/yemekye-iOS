@@ -9,5 +9,5 @@ target 'yemekye' do
    #pod 'FacebookShare'
    pod 'IQKeyboardManager'
    pod 'AlamofireObjectMapper', '~> 5.0'
-   pod "PagingMenuController"	
+   pod 'AlamofireImage', '~> 3.3'		
 end

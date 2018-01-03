@@ -29,48 +29,13 @@ class Request{
 
 
     
-    //THis will be populated by the request method that the app can later use
-    
-    
-    //MARK:- Get city by name
-    static func getCityByName(q: String?){
-        
-        let parameters = ["q": "\(q!)","count":"\(10)"]
-        
-        let URL = "https://developers.zomato.com/api/v2.1/cities"
-        Alamofire.request(URL,parameters:parameters,headers: headers).responseObject { (response: DataResponse<CityResponse>) in
-            
-            let requestURL = response.request?.url?.absoluteString
-            print(requestURL ?? "")
-            
-            let cityResponse = response.result.value
-            if let response  = cityResponse?.location_suggestions{
-                for city in response{
-                                        print(city.country_id)
-                                        print(city.name)
-                                        print(city.country_id)
-                                        print(city.country_name)
-                                        print(city.is_state)
-                                        print(city.state_name)
-                                        print(city.state_code)
-                                        print(city.location)
-                    //this should populate the [ZomatoCity array with data ]
-                    _cityCollection.append(city)
-                }
-              //  completion(cityCollection)
-            }
-        }
-    }
-    
-    
-
-
-
-
-
-
 
     //MARK:- Get Location
+    
+    /**
+     This functions returns the the `location` closest location names based on the search Text the user provides
+     */
+    
     static func getLocation(_ query: String){
 
         //Will be populated by response from API
@@ -124,13 +89,15 @@ class Request{
     
     static func getResturantInfo(From id : Int){
         
+    
         let parameters = ["res_id":"\(id)"]
         let URL = "https://developers.zomato.com/api/v2.1/restaurant"
         Alamofire.request(URL,parameters:parameters,headers: headers).responseObject { (response: DataResponse<ResturantResponse>) in
             
             let ResturantResponse = response.result.value
         
-            if let response = ResturantResponse{
+            if let response = ResturantResponse {
+                print("This is the URL for thumb image \(response.thumb)")
                 ResturantsFromAPI.append(response)
             }
             

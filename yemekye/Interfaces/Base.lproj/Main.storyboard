@@ -1012,7 +1012,6 @@
                     <connections>
                         <outlet property="tableView" destination="FdQ-eN-3ot" id="c3a-he-JS2"/>
                         <segue destination="31Q-Fa-tnU" kind="show" identifier="settingMenu" id="6JN-p0-mcC"/>
-                        <segue destination="xIR-1O-qrP" kind="show" identifier="AddResturant" id="QAm-P5-ihf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZR-j1-Opn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1086,30 +1085,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3p-QM-r27" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="753" y="-810"/>
-        </scene>
-        <!--Add Resturant-->
-        <scene sceneID="L5P-IG-JjI">
-            <objects>
-                <viewController title="Add Resturant" id="xIR-1O-qrP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="J8q-kR-woY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The User will add resturants here " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUJ-ia-jdP">
-                                <rect key="frame" x="100" y="184" width="172" height="256"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="eGD-9B-Nw0"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8py-dB-fRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2519" y="-523"/>
         </scene>
         <!--Developer View Controller-->
         <scene sceneID="y85-cr-xsw">

@@ -75,9 +75,6 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
             self.Searchedlocations = _LocationsFromAPI
             print("The elements in the city are \(self.Searchedlocations.count)")
             self.tableview.reloadData()
-            
-            
-            
         }
     }
     
@@ -126,7 +123,11 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
         }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             cellindex = indexPath.row
-            LoginManager.LoginStatus.locationChanged = 1
+            
+            //Clear the previous location results from the main global array
+            ResturantsFromAPI = []
+            
+            // Request `API` to get the location Details of the location selected by user
             Request.getLocationDetial(Searchedlocations[indexPath.row].entity_id, Searchedlocations[indexPath.row].entity_type)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // in half a second...
                 print("data has been recieved here are the resturants")

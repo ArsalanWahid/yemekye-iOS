@@ -39,6 +39,7 @@ class LoginViewController: UIViewController,LoginButtonDelegate{
             Auth.auth().signIn(with: credential) { (user, error) in
                 if let error = error {
                     // ...
+                    fatalError("Could not sign in user \(user) due to error \(error)")
                     return
                 }
                 // User is signed in

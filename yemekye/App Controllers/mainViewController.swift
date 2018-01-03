@@ -32,12 +32,12 @@ import FacebookCore
 var cellIndex = 0
 
 class mainViewController: UIViewController , UITableViewDelegate,UITableViewDataSource{
-   
+    
     
     @IBOutlet weak var tableview: UITableView!
     
     
-
+    
     
     
     //MARK:- Cell Identifiers
@@ -56,7 +56,7 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
         navigationController?.navigationBar.barTintColor = .red
         fetchProfile()
         setNavbar()
-        tableview.reloadData()
+        
     }
     
     
@@ -77,27 +77,34 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
             
             let loop = _Resturants_ids.prefix(5)
             let newarray = Array(loop)
+            
             for n in newarray{
                 
                 Request.getResturantInfo(From: Int(n)!)
-               DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                print("data gotten")
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                 
                 print(ResturantsFromAPI.count)
                 print("getting data")
-                 self.tableview.reloadData()
+                self.tableview.reloadData()
                 
-               })
                 
-                print("data gotten")
-            }
-       //  LoginManager.LoginStatus.resturantIDsRecieved = false
+            })
+            //  LoginManager.LoginStatus.resturantIDsRecieved = false
         }else{
             //keep the conventioanl data
         }
     }
     
     
-
+    override func viewWillDisappear(_ animated: Bool) {
+        LoginManager.LoginStatus.resturantIDsRecieved = false
+    }
+    
+    
+    
     //MARK:- Private function
     private func setNavbar(){
         let middleItem = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
@@ -148,7 +155,7 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
     
     
     
-
+    
     
     
     //MARK:- Navigation
@@ -171,8 +178,6 @@ extension mainViewController{
         
     }
     
-    
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         /*Use when loading from custom xib file*/
@@ -199,7 +204,7 @@ extension mainViewController{
             return cell
         }
         
-
+        
         return UITableViewCell()
     }
     
@@ -231,22 +236,14 @@ extension mainViewController{
     //When user selects the table View cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.row == 0 {
-            
-            print("Welcome screen clicked")
-        }
-        
         if indexPath.row == 2{
             performSegue(withIdentifier: StoryBoard.showPromotions, sender: nil)
-        }
-        
-        if indexPath.row == 3 {
-            print("developers Screen Clicked")
         }
     }
     
     
 }
+
 
 //MARK:- UICollectionViewDataSource
 extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate{
@@ -255,13 +252,12 @@ extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if LoginManager.LoginStatus.resturantIDsRecieved == false{
-           
             return 4
         }else{
             //will return count for total resturants here
             return ResturantsFromAPI.count
         }
-        return 0
+        
     }
     
     
@@ -273,26 +269,21 @@ extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate
             cell.nameLabel.text = ResturantsFromAPI[indexPath.row].name
             cell.addressLabel.text = ResturantsFromAPI[indexPath.row].location.locality
             cell.rating.text = ResturantsFromAPI[indexPath.row].user_rating.aggregate_rating
+            //cell.image = ResturantsFromAPI[indexPath.row].thumb
             
             return cell
-            collectionView.reloadData()
         }else{
-        
-        cell.image = RData.Rdata.resturants[indexPath.row].resturantImage
-        cell.nameLabel.text = RData.Rdata.resturants[indexPath.row].name
-        cell.addressLabel.text = RData.Rdata.resturants[indexPath.row].address
-        cell.rating.text = String(RData.Rdata.resturants[indexPath.row].rating)
-        return cell
-        
+            
+            cell.image = RData.Rdata.resturants[indexPath.row].resturantImage
+            cell.nameLabel.text = RData.Rdata.resturants[indexPath.row].name
+            cell.addressLabel.text = RData.Rdata.resturants[indexPath.row].address
+            cell.rating.text = String(RData.Rdata.resturants[indexPath.row].rating)
+            return cell
+            
         }
         
     }
-    
-    //MARK:- to be implemented
-    func loadImageOverNetwork(with URL: String) {
-        
-        
-    }
+  
     
     
     //This will perform logic for when item from collection  view is selected
@@ -301,16 +292,16 @@ extension mainViewController:UICollectionViewDataSource,UICollectionViewDelegate
         cellIndex = indexPath.row
         print("User has selected \(cellIndex) from collection View on main app controller")
         if cellIndex <= 4 {
-        let image: UIImage =  RData.Rdata.resturants[cellIndex].resturantImage
-        
+            let image: UIImage =  RData.Rdata.resturants[cellIndex].resturantImage
+            
             performSegue(withIdentifier: StoryBoard.resturantDetail, sender: image)
             
         }
     }
     
-
-
-  
+    
+    
+    
 }
 
 

@@ -45,8 +45,6 @@ class MoreViewController: UIViewController,UITableViewDataSource, UITableViewDel
         if indexPath.row == 0{
             performSegue(withIdentifier: "settingMenu", sender: self)
             
-        }else if indexPath.row == 1{
-            performSegue(withIdentifier: "AddResturant", sender: nil)
         }else{
             fatalError("No such cell exists")
         }
