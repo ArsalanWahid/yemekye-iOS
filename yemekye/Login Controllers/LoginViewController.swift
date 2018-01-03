@@ -39,6 +39,7 @@ class LoginViewController: UIViewController,LoginButtonDelegate{
             Auth.auth().signIn(with: credential) { (user, error) in
                 if let error = error {
                     // ...
+                   
                     fatalError("Could not sign in user \(user) due to error \(error)")
                     return
                 }
@@ -99,11 +100,7 @@ class LoginViewController: UIViewController,LoginButtonDelegate{
       
     }
     
-    //MARK:- Actions
-    //When login button is pressed on the login screen
-    @IBAction func loginFacebook(_ sender: UIButton) {
-        
-    }
+   
     
     @IBAction func noSignIn(_ sender: UIButton) {
         //WILL NEED TO FIX THIS AS TECNICALLY USER DIDNT LOGIN MUST ADD STRING HERE

@@ -98,6 +98,7 @@ class Request{
         
             if let response = ResturantResponse {
                 print("This is the URL for thumb image \(response.thumb)")
+                print(response.menu_url)
                 ResturantsFromAPI.append(response)
             }
             

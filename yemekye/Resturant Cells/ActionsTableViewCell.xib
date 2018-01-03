@@ -45,6 +45,13 @@
                             <action selector="webSitePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AcT-Il-Aig"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="l" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qof-rE-wSs">
+                        <rect key="frame" x="216" y="47" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="pPB-Nf-qiN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="EaW-s6-HlQ"/>
@@ -57,8 +64,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="phone" destination="bUO-se-i5A" id="hNi-5A-6mK"/>
-                <outlet property="website" destination="pPB-Nf-qiN" id="U3i-qI-Yez"/>
+                <outlet property="phone" destination="bUO-se-i5A" id="FsP-Vn-kMm"/>
+                <outlet property="phone1" destination="bUO-se-i5A" id="7xS-cc-piH"/>
+                <outlet property="webLabel" destination="pPB-Nf-qiN" id="A6H-A7-WcL"/>
+                <outlet property="website" destination="qof-rE-wSs" id="gev-BH-k5A"/>
+                <outlet property="websiteurl" destination="qof-rE-wSs" id="arq-49-7vn"/>
             </connections>
             <point key="canvasLocation" x="25" y="45"/>
         </tableViewCell>

@@ -108,14 +108,14 @@ class ResturantDetialViewController: UITableViewController{
     }
     
     
-    //MARK:- Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showMenu"{
-            let DVC = segue.destination as! MenuTableViewController
-            DVC.menu = RData.Rdata.resturants[cellIndex].menu
-        }
-    }
+//    //MARK:- Navigation
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showMenu"{
+//            let DVC = segue.destination as! MenuTableViewController
+//            DVC.menu = RData.Rdata.resturants[cellIndex].menu
+//        }
+//    }
     
 }
 
@@ -169,8 +169,16 @@ extension ResturantDetialViewController{
         else if indexPath.row == 1{
             let cell = Bundle.main.loadNibNamed("ActionsTableViewCell", owner: self, options: nil)?.first as! ActionsTableViewCell
             cell.selectionStyle = UITableViewCellSelectionStyle.none
-            cell.phone.titleLabel?.text = ResturantsFromAPI[cellIndex].phone_numbers
-            cell.website.titleLabel?.text = ResturantsFromAPI[cellIndex].url
+            //Check if any data is Resturants
+            if ResturantsFromAPI.count >= 1{
+            
+            cell.phone.titleLabel?.text = "03312226043"
+            cell.websiteurl.text = ResturantsFromAPI[cellIndex].url
+        
+            }else{
+                cell.phone.titleLabel?.text = "03312226034"
+                cell.website.titleLabel?.text = "https://www.zomato.com/buffalo"
+            }
             return cell
             
         }else if indexPath.row == 2{
@@ -184,6 +192,7 @@ extension ResturantDetialViewController{
             
             let cell = Bundle.main.loadNibNamed("AmenitiesTableViewCell", owner: self, options: nil)?.first as! AmenitiesTableViewCell
             cell.selectionStyle = UITableViewCellSelectionStyle.none
+            print(" REstuarnt Phone number \(ResturantsFromAPI[cellIndex].phone_numbers)")
             cell.phone.titleLabel?.text = ResturantsFromAPI[cellIndex].phone_numbers
             cell.cuisinesLabel.text = ResturantsFromAPI[cellIndex].cusines
             cell.avgCostLabel.text = String(ResturantsFromAPI[cellIndex].average_cost_for_two)
@@ -215,7 +224,15 @@ extension ResturantDetialViewController{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 2{
-            performSegue(withIdentifier: "showMenu", sender: nil)
+            var url: URL!
+            let menu = ResturantsFromAPI[cellIndex].menu_url
+            if let menu  = menu{
+               url  = URL(string: "\(menu)")!
+            }else{
+                print("no menu found")
+                url = URL(string: "https://www.zomato.com/buffalo")
+            }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
     

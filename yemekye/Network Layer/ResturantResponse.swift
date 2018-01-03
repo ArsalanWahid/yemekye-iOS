@@ -35,6 +35,7 @@ class ResturantResponse: Mappable{
     var average_cost_for_two:Int!
     var currency: String!
     var cusines:String!
+    var menu_url: String!
     
     //put resturantdata to be captured here .......
     
@@ -52,6 +53,7 @@ class ResturantResponse: Mappable{
         average_cost_for_two <- map["average_cost_for_two"]
         currency <- map["currency"]
         cusines <- map["cuisines"]
+        menu_url <- map["menu_url"]
         
     }
 }

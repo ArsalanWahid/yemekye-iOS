@@ -69,13 +69,16 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
     //MARK:- UISearchBar
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         Request.getLocation(searchBarController.searchBar.text!)
-        print(searchBarController.searchBar.text)
+        print(searchBarController.searchBar.text!)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // in half a second...
             
+           
             self.Searchedlocations = _LocationsFromAPI
-            print("The elements in the city are \(self.Searchedlocations.count)")
             self.tableview.reloadData()
         }
+       
+        print("The elements in the city are \(self.Searchedlocations.count)")
+        tableview.reloadData()
     }
     
     
@@ -129,7 +132,7 @@ class SearchViewController: UIViewController,UISearchBarDelegate,UISearchResults
             
             // Request `API` to get the location Details of the location selected by user
             Request.getLocationDetial(Searchedlocations[indexPath.row].entity_id, Searchedlocations[indexPath.row].entity_type)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // in half a second...
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { // in half a second...
                 print("data has been recieved here are the resturants")
                 print(_Resturants_ids)
                 LoginManager.LoginStatus.resturantIDsRecieved = true

@@ -84,7 +84,7 @@ class mainViewController: UIViewController , UITableViewDelegate,UITableViewData
                 print("data gotten")
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
                 
                 print(ResturantsFromAPI.count)
                 print("getting data")
