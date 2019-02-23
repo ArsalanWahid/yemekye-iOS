@@ -20,11 +20,6 @@ The current project uses:
 - Local Data (Work in prgress to move to backend)
 
 
-
-If you find bugs in this project (Which you will as any project :wink:) Please let me know or use the oppurtunity to learn from it and fix it and make a pull request.
-
-*The project is by no means complete and will continue to develop as I learn new skills and add more features.*
-
 Finally have Fun with the project and fixing it.... #development is hard thats why you should practise it.
 
 
